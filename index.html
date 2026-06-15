@@ -6,6 +6,13 @@
   <title>변호사 최우준</title>
   <meta name="description" content="담당 변호사가 처음부터 끝까지 1:1로 책임지는 법률 서비스. 형사·민사·엔터·IP·부동산·가사·의료·노동 전 분야." />
 
+  <!-- OG Tags -->
+  <meta property="og:title" content="변호사 최우준" />
+  <meta property="og:description" content="담당 변호사가 처음부터 끝까지 1:1로 직접 책임집니다." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/00jun0219/chungha-law/main/%EC%B5%9C%EC%9A%B0%EC%A4%80%EB%B3%80%ED%98%B8%EC%82%AC.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,7 +30,6 @@
       --terracotta-light: #E8906A;
       --terracotta-pale: #F5E6DC;
       --dark-green: #2D4A3E;
-      --dark-green-light: #3D6355;
       --charcoal: #1C1C1C;
       --warm-gray: #6B6560;
       --warm-gray-light: #9C9490;
@@ -63,16 +69,14 @@
 
     .nav-logo {
       font-family: var(--serif);
-      font-size: 1.1rem;
-      font-weight: 600;
+      font-size: 1.15rem;
+      font-weight: 700;
       color: var(--charcoal);
       text-decoration: none;
-      letter-spacing: -0.01em;
+      letter-spacing: 0.01em;
     }
 
-    .nav-logo span {
-      color: var(--terracotta);
-    }
+    .nav-logo span { color: var(--terracotta); }
 
     .nav-links {
       display: flex;
@@ -97,7 +101,7 @@
       color: var(--white) !important;
       padding: 0.5rem 1.25rem;
       border-radius: 4px;
-      font-weight: 500 !important;
+      font-weight: 700 !important;
       transition: background 0.2s !important;
     }
 
@@ -160,18 +164,14 @@
       padding-right: 5%;
     }
 
-    .hero-badge {
-      display: inline-block;
+    .hero-eyebrow {
       font-family: var(--sans);
       font-size: 0.8rem;
-      font-weight: 500;
-      color: var(--terracotta);
-      letter-spacing: 0.08em;
+      font-weight: 700;
+      color: var(--warm-gray);
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      border: 1px solid var(--terracotta);
-      padding: 0.3rem 0.8rem;
-      border-radius: 2px;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
       opacity: 0;
       transform: translateY(12px);
       animation: fadeUp 0.8s ease 0.2s forwards;
@@ -179,33 +179,33 @@
 
     .hero-heading {
       font-family: var(--serif);
-      font-size: clamp(2.2rem, 4vw, 3.4rem);
-      font-weight: 600;
-      line-height: 1.25;
-      letter-spacing: -0.02em;
+      font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
       color: var(--charcoal);
       margin-bottom: 1.25rem;
       opacity: 0;
       transform: translateY(16px);
-      animation: fadeUp 0.8s ease 0.4s forwards;
+      animation: fadeUp 0.8s ease 0.35s forwards;
     }
 
     .hero-heading em {
-      font-style: normal;
+      font-style: italic;
       color: var(--terracotta);
     }
 
     .hero-sub {
       font-family: var(--sans);
-      font-size: 1.05rem;
-      font-weight: 300;
+      font-size: 1rem;
+      font-weight: 400;
       color: var(--warm-gray);
-      line-height: 1.8;
+      line-height: 1.85;
       margin-bottom: 2.5rem;
-      max-width: 440px;
+      max-width: 420px;
       opacity: 0;
       transform: translateY(16px);
-      animation: fadeUp 0.8s ease 0.6s forwards;
+      animation: fadeUp 0.8s ease 0.5s forwards;
     }
 
     .hero-ctas {
@@ -214,7 +214,7 @@
       flex-wrap: wrap;
       opacity: 0;
       transform: translateY(16px);
-      animation: fadeUp 0.8s ease 0.8s forwards;
+      animation: fadeUp 0.8s ease 0.65s forwards;
     }
 
     .btn-primary {
@@ -224,9 +224,9 @@
       background: var(--terracotta);
       color: var(--white);
       font-family: var(--sans);
-      font-size: 0.95rem;
-      font-weight: 500;
-      padding: 0.85rem 1.75rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 0.875rem 1.75rem;
       border-radius: 4px;
       text-decoration: none;
       transition: background 0.2s, transform 0.2s;
@@ -234,7 +234,7 @@
 
     .btn-primary:hover {
       background: var(--terracotta-light);
-      transform: translateY(-1px);
+      transform: translateY(-2px);
     }
 
     .btn-outline {
@@ -244,9 +244,9 @@
       background: transparent;
       color: var(--charcoal);
       font-family: var(--sans);
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 400;
-      padding: 0.85rem 1.75rem;
+      padding: 0.875rem 1.75rem;
       border-radius: 4px;
       border: 1.5px solid var(--beige-dark);
       text-decoration: none;
@@ -255,7 +255,7 @@
 
     .btn-outline:hover {
       border-color: var(--warm-gray);
-      transform: translateY(-1px);
+      transform: translateY(-2px);
     }
 
     .hero-photo-wrap {
@@ -287,7 +287,7 @@
       height: 92%;
       border: 2px solid var(--terracotta);
       border-radius: 200px 200px 0 0;
-      opacity: 0.3;
+      opacity: 0.25;
     }
 
     .hero-photo {
@@ -312,8 +312,8 @@
       max-width: 900px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
+      grid-template-columns: 1fr 1px 1fr 1px 1fr;
+      gap: 0;
       text-align: center;
     }
 
@@ -321,12 +321,13 @@
       display: flex;
       flex-direction: column;
       gap: 0.4rem;
+      padding: 0 2rem;
     }
 
     .trust-num {
       font-family: var(--serif);
       font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 600;
+      font-weight: 700;
       color: var(--terracotta-light);
       letter-spacing: -0.02em;
       line-height: 1;
@@ -334,55 +335,51 @@
 
     .trust-label {
       font-family: var(--sans);
-      font-size: 0.875rem;
-      font-weight: 300;
-      color: rgba(255,255,255,0.65);
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.55);
       letter-spacing: 0.04em;
     }
 
     .trust-divider {
-      width: 1px;
       background: rgba(255,255,255,0.1);
+      align-self: stretch;
     }
 
     /* ===== SHARED SECTION STYLES ===== */
-    section {
-      padding: 100px 5%;
-    }
+    section { padding: 100px 5%; }
 
     .section-label {
       font-family: var(--sans);
-      font-size: 0.75rem;
-      font-weight: 500;
+      font-size: 0.72rem;
+      font-weight: 700;
       color: var(--terracotta);
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       margin-bottom: 0.75rem;
     }
 
     .section-heading {
       font-family: var(--serif);
-      font-size: clamp(1.7rem, 3vw, 2.4rem);
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      line-height: 1.3;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
       color: var(--charcoal);
       margin-bottom: 1rem;
     }
 
     .section-sub {
       font-family: var(--sans);
-      font-size: 1rem;
-      font-weight: 300;
+      font-size: 0.95rem;
+      font-weight: 400;
       color: var(--warm-gray);
-      line-height: 1.8;
+      line-height: 1.85;
       max-width: 520px;
     }
 
     /* ===== CORE VALUES ===== */
-    .values {
-      background: var(--beige);
-    }
+    .values { background: var(--beige); }
 
     .values-grid {
       display: grid;
@@ -418,19 +415,18 @@
 
     .value-title {
       font-family: var(--serif);
-      font-size: 1.15rem;
-      font-weight: 600;
+      font-size: 1.2rem;
+      font-weight: 700;
       color: var(--charcoal);
       margin-bottom: 0.6rem;
-      letter-spacing: -0.01em;
     }
 
     .value-desc {
       font-family: var(--sans);
-      font-size: 0.9rem;
-      font-weight: 300;
+      font-size: 0.875rem;
+      font-weight: 400;
       color: var(--warm-gray);
-      line-height: 1.75;
+      line-height: 1.8;
     }
 
     /* ===== PRACTICE AREAS ===== */
@@ -455,7 +451,6 @@
       padding: 2rem;
       position: relative;
       overflow: hidden;
-      cursor: pointer;
       border: 1.5px solid transparent;
       transition: border-color 0.3s, transform 0.3s;
       text-decoration: none;
@@ -490,26 +485,25 @@
 
     .practice-name {
       font-family: var(--serif);
-      font-size: 1.15rem;
-      font-weight: 600;
+      font-size: 1.2rem;
+      font-weight: 700;
       color: var(--charcoal);
       margin-bottom: 0.6rem;
-      letter-spacing: -0.01em;
     }
 
     .practice-desc {
       font-family: var(--sans);
-      font-size: 0.85rem;
-      font-weight: 300;
+      font-size: 0.84rem;
+      font-weight: 400;
       color: var(--warm-gray);
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     .practice-arrow {
       position: absolute;
       bottom: 1.5rem;
       right: 1.5rem;
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: var(--terracotta);
       opacity: 0;
       transition: opacity 0.3s, transform 0.3s;
@@ -521,9 +515,7 @@
     }
 
     /* ===== ABOUT ===== */
-    .about {
-      background: var(--beige);
-    }
+    .about { background: var(--beige); }
 
     .about-grid {
       display: grid;
@@ -533,62 +525,27 @@
       margin-top: 4rem;
     }
 
-    .about-photo-col {
-      position: relative;
-    }
-
-    .about-photo-frame {
-      position: relative;
-      display: inline-block;
-    }
-
-    .about-photo-frame::before {
-      content: '';
-      position: absolute;
-      top: -16px;
-      left: -16px;
-      right: 16px;
-      bottom: 16px;
-      border: 2px solid var(--terracotta);
-      border-radius: 8px;
-      opacity: 0.4;
-    }
-
-    .about-photo {
-      width: 100%;
-      max-width: 380px;
-      height: 460px;
-      object-fit: cover;
-      object-position: top center;
-      border-radius: 8px;
-      display: block;
-    }
-
     .about-text-col {}
 
     .about-quote {
       font-family: var(--serif);
-      font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+      font-size: clamp(1.25rem, 2.2vw, 1.6rem);
       font-weight: 400;
       font-style: italic;
       color: var(--charcoal);
-      line-height: 1.6;
+      line-height: 1.65;
       margin-bottom: 2.5rem;
       padding-left: 1.5rem;
       border-left: 3px solid var(--terracotta);
     }
 
-    .credentials {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
+    .credentials { display: flex; flex-direction: column; }
 
     .credential-item {
       display: flex;
       align-items: flex-start;
       gap: 1rem;
-      padding: 0.9rem 0;
+      padding: 0.85rem 0;
       border-bottom: 1px solid var(--beige-dark);
     }
 
@@ -600,22 +557,69 @@
       background: var(--terracotta);
       border-radius: 50%;
       flex-shrink: 0;
-      margin-top: 0.4rem;
+      margin-top: 0.45rem;
+    }
+
+    .credential-tag {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--white);
+      background: var(--terracotta);
+      padding: 0.1rem 0.45rem;
+      border-radius: 3px;
+      margin-right: 0.4rem;
+      vertical-align: middle;
+      letter-spacing: 0.02em;
+      flex-shrink: 0;
+    }
+
+    .credential-tag.green {
+      background: var(--dark-green);
     }
 
     .credential-text {
       font-family: var(--sans);
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       font-weight: 400;
       color: var(--charcoal);
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
-    .credential-sub {
-      font-size: 0.8rem;
-      font-weight: 300;
-      color: var(--warm-gray);
-      margin-top: 0.15rem;
+    .about-photo-col {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .about-photo-frame {
+      position: relative;
+      display: inline-block;
+    }
+
+    .about-photo-frame::before {
+      content: '';
+      position: absolute;
+      top: -16px;
+      left: 16px;
+      right: -16px;
+      bottom: 16px;
+      border: 2px solid var(--terracotta);
+      border-radius: 8px;
+      opacity: 0.35;
+    }
+
+    .about-photo {
+      width: 100%;
+      max-width: 360px;
+      height: 460px;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 8px;
+      display: block;
+      position: relative;
+      z-index: 1;
     }
 
     /* ===== YOUTUBE ===== */
@@ -635,10 +639,10 @@
 
     .youtube-label {
       font-family: var(--sans);
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: rgba(255,255,255,0.5);
-      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       margin-bottom: 0.75rem;
     }
@@ -646,18 +650,17 @@
     .youtube-title {
       font-family: var(--serif);
       font-size: clamp(1.5rem, 3vw, 2.2rem);
-      font-weight: 600;
+      font-weight: 700;
       color: var(--white);
       margin-bottom: 0.75rem;
-      letter-spacing: -0.02em;
     }
 
     .youtube-desc {
       font-family: var(--sans);
-      font-size: 0.95rem;
-      font-weight: 300;
-      color: rgba(255,255,255,0.65);
-      line-height: 1.8;
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.85;
     }
 
     .youtube-btn {
@@ -667,18 +670,18 @@
       background: #FF0000;
       color: var(--white);
       font-family: var(--sans);
-      font-size: 0.9rem;
-      font-weight: 500;
-      padding: 0.8rem 1.5rem;
+      font-size: 0.875rem;
+      font-weight: 700;
+      padding: 0.85rem 1.5rem;
       border-radius: 4px;
       text-decoration: none;
       white-space: nowrap;
-      transition: opacity 0.2s, transform 0.2s;
       flex-shrink: 0;
+      transition: opacity 0.2s, transform 0.2s;
     }
 
     .youtube-btn:hover {
-      opacity: 0.9;
+      opacity: 0.88;
       transform: translateY(-2px);
     }
 
@@ -692,17 +695,16 @@
     .cta-heading {
       font-family: var(--serif);
       font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-      font-weight: 600;
+      font-weight: 700;
       color: var(--white);
-      letter-spacing: -0.02em;
       margin-bottom: 0.75rem;
     }
 
     .cta-sub {
       font-family: var(--sans);
-      font-size: 1rem;
-      font-weight: 300;
-      color: rgba(255,255,255,0.8);
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.78);
       margin-bottom: 2.5rem;
     }
 
@@ -721,18 +723,15 @@
       background: var(--white);
       color: var(--terracotta);
       font-family: var(--sans);
-      font-size: 0.95rem;
-      font-weight: 600;
+      font-size: 0.9rem;
+      font-weight: 700;
       padding: 0.9rem 2rem;
       border-radius: 4px;
       text-decoration: none;
       transition: opacity 0.2s, transform 0.2s;
     }
 
-    .btn-white:hover {
-      opacity: 0.92;
-      transform: translateY(-2px);
-    }
+    .btn-white:hover { opacity: 0.92; transform: translateY(-2px); }
 
     .btn-white-outline {
       display: inline-flex;
@@ -741,32 +740,29 @@
       background: transparent;
       color: var(--white);
       font-family: var(--sans);
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 400;
       padding: 0.9rem 2rem;
       border-radius: 4px;
-      border: 1.5px solid rgba(255,255,255,0.6);
+      border: 1.5px solid rgba(255,255,255,0.55);
       text-decoration: none;
       transition: border-color 0.2s, transform 0.2s;
     }
 
-    .btn-white-outline:hover {
-      border-color: var(--white);
-      transform: translateY(-2px);
-    }
+    .btn-white-outline:hover { border-color: var(--white); transform: translateY(-2px); }
 
     .cta-phone {
-      font-family: var(--serif);
-      font-size: 0.9rem;
+      font-family: var(--sans);
+      font-size: 0.875rem;
       color: rgba(255,255,255,0.6);
       margin-top: 1.75rem;
     }
 
     .cta-phone a {
       color: var(--white);
-      font-weight: 600;
+      font-weight: 700;
       text-decoration: none;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
     }
 
     /* ===== FOOTER ===== */
@@ -785,20 +781,20 @@
 
     .footer-logo {
       font-family: var(--serif);
-      font-size: 1rem;
-      font-weight: 600;
+      font-size: 1.05rem;
+      font-weight: 700;
       color: var(--white);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
     }
 
     .footer-logo span { color: var(--terracotta-light); }
 
     .footer-info {
       font-family: var(--sans);
-      font-size: 0.8rem;
-      font-weight: 300;
-      color: rgba(255,255,255,0.4);
-      line-height: 1.9;
+      font-size: 0.78rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.38);
+      line-height: 2;
     }
 
     .footer-links {
@@ -809,9 +805,8 @@
 
     .footer-links a {
       font-family: var(--sans);
-      font-size: 0.8rem;
-      font-weight: 300;
-      color: rgba(255,255,255,0.4);
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.38);
       text-decoration: none;
       transition: color 0.2s;
     }
@@ -838,12 +833,11 @@
       justify-content: center;
       text-decoration: none;
       font-size: 1.3rem;
-      transition: transform 0.2s, opacity 0.2s;
+      transition: transform 0.2s;
       box-shadow: 0 4px 16px rgba(0,0,0,0.2);
     }
 
     .float-btn:hover { transform: scale(1.1); }
-
     .float-kakao { background: #FEE500; color: #3A1D1D; }
     .float-call { background: var(--terracotta); color: var(--white); }
 
@@ -851,7 +845,7 @@
     .modal-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(28, 28, 28, 0.7);
+      background: rgba(28,28,28,0.7);
       backdrop-filter: blur(4px);
       z-index: 200;
       display: flex;
@@ -883,42 +877,40 @@
 
     .modal-close {
       position: absolute;
-      top: 1.25rem;
-      right: 1.25rem;
-      background: none;
-      border: none;
-      font-size: 1.4rem;
-      cursor: pointer;
-      color: var(--warm-gray);
-      line-height: 1;
+      top: 1.25rem; right: 1.25rem;
+      background: none; border: none;
+      font-size: 1.4rem; cursor: pointer;
+      color: var(--warm-gray); line-height: 1;
     }
 
     .modal h3 {
       font-family: var(--serif);
-      font-size: 1.4rem;
-      font-weight: 600;
+      font-size: 1.45rem;
+      font-weight: 700;
       margin-bottom: 0.4rem;
     }
 
     .modal p {
       font-family: var(--sans);
-      font-size: 0.9rem;
-      font-weight: 300;
+      font-size: 0.875rem;
       color: var(--warm-gray);
       margin-bottom: 1.75rem;
     }
 
-    .form-group {
-      margin-bottom: 1rem;
-    }
+    .form-group { margin-bottom: 1rem; }
 
     .form-group label {
       display: block;
       font-family: var(--sans);
-      font-size: 0.82rem;
-      font-weight: 500;
+      font-size: 0.8rem;
+      font-weight: 700;
       color: var(--charcoal);
       margin-bottom: 0.4rem;
+    }
+
+    .form-group label .req {
+      color: var(--terracotta);
+      margin-left: 2px;
     }
 
     .form-group input,
@@ -926,7 +918,7 @@
     .form-group textarea {
       width: 100%;
       font-family: var(--sans);
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       color: var(--charcoal);
       background: var(--white);
       border: 1.5px solid var(--beige-dark);
@@ -938,9 +930,7 @@
 
     .form-group input:focus,
     .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--terracotta);
-    }
+    .form-group textarea:focus { border-color: var(--terracotta); }
 
     .form-group textarea { resize: vertical; min-height: 90px; }
 
@@ -949,9 +939,9 @@
       background: var(--terracotta);
       color: var(--white);
       font-family: var(--sans);
-      font-size: 0.95rem;
-      font-weight: 500;
-      padding: 0.85rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 0.875rem;
       border: none;
       border-radius: 6px;
       cursor: pointer;
@@ -976,11 +966,7 @@
       transition: opacity 0.7s ease, transform 0.7s ease;
     }
 
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
+    .reveal.visible { opacity: 1; transform: translateY(0); }
     .reveal-delay-1 { transition-delay: 0.1s; }
     .reveal-delay-2 { transition-delay: 0.2s; }
     .reveal-delay-3 { transition-delay: 0.3s; }
@@ -989,7 +975,7 @@
     .mobile-menu {
       position: fixed;
       top: 72px; left: 0; right: 0;
-      background: rgba(245, 240, 232, 0.98);
+      background: rgba(245,240,232,0.98);
       backdrop-filter: blur(8px);
       padding: 1.5rem 5% 2rem;
       display: none;
@@ -1006,13 +992,9 @@
       font-size: 1rem;
       color: var(--charcoal);
       text-decoration: none;
-      font-weight: 400;
     }
 
-    .mobile-menu .nav-cta {
-      display: inline-block;
-      text-align: center;
-    }
+    .mobile-menu .nav-cta { display: inline-block; text-align: center; }
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 900px) {
@@ -1025,32 +1007,19 @@
       .hero-sub { margin: 0 auto 2.5rem; }
       .hero-ctas { justify-content: center; }
 
-      .hero-photo-wrap {
-        min-height: 340px;
-        margin-top: 2rem;
-      }
-
-      .hero-photo {
-        width: 60%;
-        height: 380px;
-      }
-
+      .hero-photo-wrap { min-height: 340px; margin-top: 2rem; }
+      .hero-photo { width: 60%; height: 380px; }
       .hero-photo-bg, .hero-photo-deco {
         width: 70%;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 50%; transform: translateX(-50%);
         right: auto;
       }
 
       .values-grid { grid-template-columns: 1fr; }
       .practices-grid { grid-template-columns: repeat(2, 1fr); }
 
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-      }
-
-      .about-photo-col { text-align: center; }
+      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .about-photo-col { order: -1; text-align: center; }
       .about-photo { max-width: 300px; height: 360px; margin: 0 auto; }
 
       .youtube-inner { grid-template-columns: 1fr; text-align: center; }
@@ -1059,13 +1028,13 @@
       .nav-links { display: none; }
       .nav-hamburger { display: flex; }
 
-      .trust-inner { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+      .trust-inner { grid-template-columns: 1fr; gap: 2rem; }
       .trust-divider { display: none; }
+      .trust-item { padding: 0; }
     }
 
     @media (max-width: 600px) {
       .practices-grid { grid-template-columns: 1fr; }
-      .trust-inner { grid-template-columns: 1fr; }
       .footer-inner { flex-direction: column; }
       .float-btns { bottom: 1.5rem; right: 1.5rem; }
     }
@@ -1087,7 +1056,6 @@
     </button>
   </nav>
 
-  <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobile-menu">
     <a href="#practices" onclick="closeMobile()">업무분야</a>
     <a href="#about" onclick="closeMobile()">변호사소개</a>
@@ -1101,7 +1069,7 @@
     <div class="hero-blob-2"></div>
 
     <div class="hero-text">
-      <span class="hero-badge">변호사 최우준</span>
+      <p class="hero-eyebrow">Attorney at Law</p>
       <h1 class="hero-heading">
         당신의 사건,<br>
         <em>제가 직접</em> 맡겠습니다
@@ -1112,12 +1080,8 @@
         법률은 어렵지 않게, 소통은 솔직하게.
       </p>
       <div class="hero-ctas">
-        <a href="#" class="btn-primary" onclick="openModal(); return false;">
-          상담 신청 →
-        </a>
-        <a href="#practices" class="btn-outline">
-          업무분야 보기
-        </a>
+        <a href="#" class="btn-primary" onclick="openModal(); return false;">상담 신청 →</a>
+        <a href="#practices" class="btn-outline">업무분야 보기</a>
       </div>
     </div>
 
@@ -1146,8 +1110,8 @@
       </div>
       <div class="trust-divider"></div>
       <div class="trust-item">
-        <div class="trust-num">13회</div>
-        <div class="trust-label">변호사시험 합격 (충남대 로스쿨)</div>
+        <div class="trust-num">제13회</div>
+        <div class="trust-label">변호사시험 합격</div>
       </div>
     </div>
   </div>
@@ -1155,9 +1119,7 @@
   <!-- ===== CORE VALUES ===== -->
   <section class="values">
     <div class="section-label">Why Us</div>
-    <h2 class="section-heading reveal">
-      저와 함께하면<br>이런 점이 다릅니다
-    </h2>
+    <h2 class="section-heading reveal">저와 함께하면<br>이런 점이 다릅니다</h2>
     <div class="values-grid">
       <div class="value-card reveal reveal-delay-1">
         <div class="value-icon">⚖️</div>
@@ -1184,11 +1146,10 @@
         <div class="section-label">Practice Areas</div>
         <h2 class="section-heading reveal">업무 분야</h2>
       </div>
-      <p class="section-sub reveal" style="max-width: 320px; font-size: 0.9rem;">
+      <p class="section-sub reveal" style="max-width: 300px; font-size: 0.875rem;">
         다양한 분야를 한 변호사가 직접 맡아, 사건의 맥락을 통합적으로 이해합니다.
       </p>
     </div>
-
     <div class="practices-grid">
       <a href="#" class="practice-card reveal reveal-delay-1">
         <div class="practice-num">01</div>
@@ -1235,17 +1196,7 @@
     <h2 class="section-heading reveal">변호사 최우준</h2>
 
     <div class="about-grid">
-      <div class="about-photo-col reveal">
-        <div class="about-photo-frame">
-          <img
-            src="https://raw.githubusercontent.com/00jun0219/chungha-law/main/%EC%B5%9C%EC%9A%B0%EC%A4%80%EB%B3%80%ED%98%B8%EC%82%AC.jpg"
-            alt="변호사 최우준"
-            class="about-photo"
-          />
-        </div>
-      </div>
-
-      <div class="about-text-col reveal reveal-delay-2">
+      <div class="about-text-col reveal">
         <blockquote class="about-quote">
           "의뢰인이 사건의 진행 상황을<br>
           항상 먼저 알 수 있도록<br>
@@ -1255,46 +1206,46 @@
         <div class="credentials">
           <div class="credential-item">
             <div class="credential-dot"></div>
-            <div>
-              <div class="credential-text">동국대학교 법학과 졸업 (우등)</div>
+            <div class="credential-text">동국대학교 법학과 졸업 (우등)</div>
+          </div>
+          <div class="credential-item">
+            <div class="credential-dot"></div>
+            <div class="credential-text">충남대학교 법학전문대학원 졸업</div>
+          </div>
+          <div class="credential-item">
+            <div class="credential-dot"></div>
+            <div class="credential-text">제13회 변호사시험 합격</div>
+          </div>
+          <div class="credential-item">
+            <div class="credential-dot"></div>
+            <div class="credential-text">한국지식재산변호사협회 제10회 특허소송 경연대회 수상</div>
+          </div>
+          <div class="credential-item">
+            <div class="credential-dot"></div>
+            <div class="credential-text">아동심리상담사 1급</div>
+          </div>
+          <div class="credential-item">
+            <div class="credential-dot"></div>
+            <div class="credential-text">
+              <span class="credential-tag green">現</span>SMGS 브랜드 법률자문
             </div>
           </div>
           <div class="credential-item">
             <div class="credential-dot"></div>
-            <div>
-              <div class="credential-text">충남대학교 법학전문대학원 졸업</div>
+            <div class="credential-text">
+              <span class="credential-tag green">現</span>KGM 노동조합 자문 변호사
             </div>
           </div>
-          <div class="credential-item">
-            <div class="credential-dot"></div>
-            <div>
-              <div class="credential-text">제13회 변호사시험 합격</div>
-            </div>
-          </div>
-          <div class="credential-item">
-            <div class="credential-dot"></div>
-            <div>
-              <div class="credential-text">한국지식재산변호사협회 제10회 특허소송 경연대회 수상</div>
-            </div>
-          </div>
-          <div class="credential-item">
-            <div class="credential-dot"></div>
-            <div>
-              <div class="credential-text">아동심리상담사 1급 자격</div>
-            </div>
-          </div>
-          <div class="credential-item">
-            <div class="credential-dot"></div>
-            <div>
-              <div class="credential-text">前 SMGS 브랜드 법률자문</div>
-            </div>
-          </div>
-          <div class="credential-item">
-            <div class="credential-dot"></div>
-            <div>
-              <div class="credential-text">前 노동조합 자문 변호사</div>
-            </div>
-          </div>
+        </div>
+      </div>
+
+      <div class="about-photo-col reveal reveal-delay-2">
+        <div class="about-photo-frame">
+          <img
+            src="https://raw.githubusercontent.com/00jun0219/chungha-law/main/%EC%B5%9C%EC%9A%B0%EC%A4%80%EB%B3%80%ED%98%B8%EC%82%AC.jpg"
+            alt="변호사 최우준"
+            class="about-photo"
+          />
         </div>
       </div>
     </div>
@@ -1338,7 +1289,6 @@
         <div class="footer-info">
           서울특별시 [주소 입력 예정]<br>
           사업자등록번호: [입력 예정]<br>
-          대표: 최우준 변호사<br>
           © 2025 변호사 최우준. All rights reserved.
         </div>
       </div>
@@ -1353,27 +1303,23 @@
 
   <!-- ===== FLOAT BUTTONS ===== -->
   <div class="float-btns">
-    <a href="#" class="float-btn float-kakao" title="카카오톡 상담" onclick="alert('카카오톡 링크를 입력해주세요'); return false;">
-      💬
-    </a>
-    <a href="tel:02-6949-6265" class="float-btn float-call" title="전화 상담">
-      📞
-    </a>
+    <a href="#" class="float-btn float-kakao" title="카카오톡 상담" onclick="alert('카카오톡 링크를 입력해주세요'); return false;">💬</a>
+    <a href="tel:02-6949-6265" class="float-btn float-call" title="전화 상담">📞</a>
   </div>
 
-  <!-- ===== CONSULTATION MODAL ===== -->
+  <!-- ===== MODAL ===== -->
   <div class="modal-overlay" id="modal-overlay" onclick="handleOverlayClick(event)">
     <div class="modal">
       <button class="modal-close" onclick="closeModal()" aria-label="닫기">×</button>
       <h3>상담 신청</h3>
       <p>간단한 정보를 남겨주시면 빠르게 연락드리겠습니다.</p>
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="handleSubmit(event)">
+      <form onsubmit="handleSubmit(event)">
         <div class="form-group">
-          <label for="name">성함 *</label>
+          <label for="name">이름 <span class="req">*</span></label>
           <input type="text" id="name" name="name" placeholder="홍길동" required />
         </div>
         <div class="form-group">
-          <label for="phone">연락처 *</label>
+          <label for="phone">연락처 <span class="req">*</span></label>
           <input type="tel" id="phone" name="phone" placeholder="010-0000-0000" required />
         </div>
         <div class="form-group">
@@ -1400,33 +1346,20 @@
 
   <!-- ===== SCRIPTS ===== -->
   <script>
-    // Nav scroll
     const nav = document.getElementById('main-nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 40);
     });
 
-    // Scroll reveal
     const reveals = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
 
-    reveals.forEach(el => revealObserver.observe(el));
+    function toggleMobile() { document.getElementById('mobile-menu').classList.toggle('open'); }
+    function closeMobile() { document.getElementById('mobile-menu').classList.remove('open'); }
 
-    // Mobile menu
-    function toggleMobile() {
-      document.getElementById('mobile-menu').classList.toggle('open');
-    }
-    function closeMobile() {
-      document.getElementById('mobile-menu').classList.remove('open');
-    }
-
-    // Modal
     function openModal() {
       document.getElementById('modal-overlay').classList.add('active');
       document.body.style.overflow = 'hidden';
@@ -1435,12 +1368,8 @@
       document.getElementById('modal-overlay').classList.remove('active');
       document.body.style.overflow = '';
     }
-    function handleOverlayClick(e) {
-      if (e.target === e.currentTarget) closeModal();
-    }
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeModal();
-    });
+    function handleOverlayClick(e) { if (e.target === e.currentTarget) closeModal(); }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
     function handleSubmit(e) {
       e.preventDefault();
