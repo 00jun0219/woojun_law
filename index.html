@@ -5,12 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>변호사 최우준</title>
   <meta name="description" content="담당 변호사가 처음부터 끝까지 1:1로 책임지는 법률 서비스. 형사·민사·엔터·IP·부동산·가사·의료·노동 전 분야." />
+  <meta name="keywords" content="변호사 최우준, 형사변호사, 민사소송 변호사, 엔터테인먼트 변호사, 지식재산권 변호사, 부동산 분쟁 변호사, 가사 이혼 변호사, 노동 산재 변호사" />
+  <meta name="robots" content="index, follow" />
 
   <!-- OG Tags -->
+  <meta property="og:type" content="website" />
   <meta property="og:title" content="변호사 최우준" />
   <meta property="og:description" content="담당 변호사가 처음부터 끝까지 1:1로 직접 책임집니다." />
-  <meta property="og:image" content="https://raw.githubusercontent.com/00jun0219/chungha-law/main/%EC%B5%9C%EC%9A%B0%EC%A4%80%EB%B3%80%ED%98%B8%EC%82%AC.jpg" />
-  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://00jun0219.github.io/woojun_law/최우준변호사.jpg" />
+  <meta property="og:url" content="https://00jun0219.github.io/woojun_law/" />
+  <meta property="og:site_name" content="변호사 최우준" />
+  <meta property="og:locale" content="ko_KR" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Google Fonts -->
@@ -95,6 +100,7 @@
     }
 
     .nav-links a:hover { color: var(--charcoal); }
+    .nav-links a.active { color: var(--charcoal); font-weight: 700; }
 
     .nav-cta {
       background: var(--terracotta) !important;
@@ -439,6 +445,17 @@
       gap: 1rem;
     }
 
+    .practices-link {
+      font-family: var(--sans);
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--terracotta);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .practices-link:hover { color: var(--terracotta-light); }
+
     .practices-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -514,7 +531,7 @@
       transform: translate(2px, -2px);
     }
 
-    /* ===== ABOUT ===== */
+    /* ===== ABOUT (SUMMARY) ===== */
     .about { background: var(--beige); }
 
     .about-grid {
@@ -525,8 +542,6 @@
       margin-top: 4rem;
     }
 
-    .about-text-col {}
-
     .about-quote {
       font-family: var(--serif);
       font-size: clamp(1.25rem, 2.2vw, 1.6rem);
@@ -534,57 +549,18 @@
       font-style: italic;
       color: var(--charcoal);
       line-height: 1.65;
-      margin-bottom: 2.5rem;
+      margin-bottom: 1.75rem;
       padding-left: 1.5rem;
       border-left: 3px solid var(--terracotta);
     }
 
-    .credentials { display: flex; flex-direction: column; }
-
-    .credential-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      padding: 0.85rem 0;
-      border-bottom: 1px solid var(--beige-dark);
-    }
-
-    .credential-item:last-child { border-bottom: none; }
-
-    .credential-dot {
-      width: 7px;
-      height: 7px;
-      background: var(--terracotta);
-      border-radius: 50%;
-      flex-shrink: 0;
-      margin-top: 0.45rem;
-    }
-
-    .credential-tag {
-      display: inline-block;
+    .about-summary {
       font-family: var(--sans);
-      font-size: 0.7rem;
-      font-weight: 700;
-      color: var(--white);
-      background: var(--terracotta);
-      padding: 0.1rem 0.45rem;
-      border-radius: 3px;
-      margin-right: 0.4rem;
-      vertical-align: middle;
-      letter-spacing: 0.02em;
-      flex-shrink: 0;
-    }
-
-    .credential-tag.green {
-      background: var(--dark-green);
-    }
-
-    .credential-text {
-      font-family: var(--sans);
-      font-size: 0.875rem;
-      font-weight: 400;
-      color: var(--charcoal);
-      line-height: 1.55;
+      font-size: 0.95rem;
+      color: var(--warm-gray);
+      line-height: 1.85;
+      margin-bottom: 2rem;
+      max-width: 460px;
     }
 
     .about-photo-col {
@@ -950,6 +926,7 @@
     }
 
     .form-submit:hover { background: var(--terracotta-light); }
+    .form-submit:disabled { opacity: 0.6; cursor: not-allowed; }
 
     /* ===== ANIMATIONS ===== */
     @keyframes fadeUp {
@@ -1044,10 +1021,10 @@
 
   <!-- ===== NAV ===== -->
   <nav id="main-nav">
-    <a href="#" class="nav-logo"><span>변호사</span> 최우준</a>
+    <a href="index.html" class="nav-logo"><span>변호사</span> 최우준</a>
     <ul class="nav-links">
-      <li><a href="#practices">업무분야</a></li>
-      <li><a href="#about">변호사소개</a></li>
+      <li><a href="services.html">업무분야</a></li>
+      <li><a href="about.html">변호사소개</a></li>
       <li><a href="#youtube">유튜브</a></li>
       <li><a href="#" class="nav-cta" onclick="openModal(); return false;">상담 신청</a></li>
     </ul>
@@ -1057,8 +1034,8 @@
   </nav>
 
   <div class="mobile-menu" id="mobile-menu">
-    <a href="#practices" onclick="closeMobile()">업무분야</a>
-    <a href="#about" onclick="closeMobile()">변호사소개</a>
+    <a href="services.html">업무분야</a>
+    <a href="about.html">변호사소개</a>
     <a href="#youtube" onclick="closeMobile()">유튜브</a>
     <a href="#" class="nav-cta" onclick="openModal(); closeMobile(); return false;">상담 신청</a>
   </div>
@@ -1081,7 +1058,7 @@
       </p>
       <div class="hero-ctas">
         <a href="#" class="btn-primary" onclick="openModal(); return false;">상담 신청 →</a>
-        <a href="#practices" class="btn-outline">업무분야 보기</a>
+        <a href="services.html" class="btn-outline">업무분야 보기</a>
       </div>
     </div>
 
@@ -1089,7 +1066,7 @@
       <div class="hero-photo-bg"></div>
       <div class="hero-photo-deco"></div>
       <img
-        src="https://raw.githubusercontent.com/00jun0219/chungha-law/main/%EC%B5%9C%EC%9A%B0%EC%A4%80%EB%B3%80%ED%98%B8%EC%82%AC.jpg"
+        src="./최우준변호사.jpg"
         alt="변호사 최우준"
         class="hero-photo"
       />
@@ -1139,49 +1116,47 @@
     </div>
   </section>
 
-  <!-- ===== PRACTICE AREAS ===== -->
+  <!-- ===== PRACTICE AREAS (PREVIEW) ===== -->
   <section id="practices">
     <div class="practices-header">
       <div>
         <div class="section-label">Practice Areas</div>
         <h2 class="section-heading reveal">업무 분야</h2>
       </div>
-      <p class="section-sub reveal" style="max-width: 300px; font-size: 0.875rem;">
-        다양한 분야를 한 변호사가 직접 맡아, 사건의 맥락을 통합적으로 이해합니다.
-      </p>
+      <a href="services.html" class="practices-link reveal">업무 분야 상세 보기 →</a>
     </div>
     <div class="practices-grid">
-      <a href="#" class="practice-card reveal reveal-delay-1">
+      <a href="services.html#criminal" class="practice-card reveal reveal-delay-1">
         <div class="practice-num">01</div>
         <div class="practice-name">형사 사건</div>
         <p class="practice-desc">경제범죄, 성범죄, 교통사고, 소년 사건 등 수사 초기부터 공판까지</p>
         <span class="practice-arrow">↗</span>
       </a>
-      <a href="#" class="practice-card reveal reveal-delay-2">
+      <a href="services.html#civil" class="practice-card reveal reveal-delay-2">
         <div class="practice-num">02</div>
         <div class="practice-name">민사 소송</div>
         <p class="practice-desc">계약 불이행, 손해배상, 채권채무, 가압류·가처분</p>
         <span class="practice-arrow">↗</span>
       </a>
-      <a href="#" class="practice-card reveal reveal-delay-3">
+      <a href="services.html#entertainment" class="practice-card reveal reveal-delay-3">
         <div class="practice-num">03</div>
         <div class="practice-name">엔터테인먼트 · IP</div>
         <p class="practice-desc">전속계약 분쟁, 저작권·상표권 침해, 명예훼손 대응</p>
         <span class="practice-arrow">↗</span>
       </a>
-      <a href="#" class="practice-card reveal reveal-delay-1">
+      <a href="services.html#realestate" class="practice-card reveal reveal-delay-1">
         <div class="practice-num">04</div>
         <div class="practice-name">부동산 분쟁</div>
         <p class="practice-desc">지역주택조합 피해, 명도소송, 전세보증금 반환, 재개발 분쟁</p>
         <span class="practice-arrow">↗</span>
       </a>
-      <a href="#" class="practice-card reveal reveal-delay-2">
+      <a href="services.html#family" class="practice-card reveal reveal-delay-2">
         <div class="practice-num">05</div>
         <div class="practice-name">가사 · 상속</div>
         <p class="practice-desc">이혼·양육권, 재산분할, 상속 분쟁, 성년후견</p>
         <span class="practice-arrow">↗</span>
       </a>
-      <a href="#" class="practice-card reveal reveal-delay-3">
+      <a href="services.html#medical" class="practice-card reveal reveal-delay-3">
         <div class="practice-num">06</div>
         <div class="practice-name">의료 · 노동</div>
         <p class="practice-desc">의료 과실 입증, 산업재해, 해고·임금 체불 대응</p>
@@ -1190,7 +1165,7 @@
     </div>
   </section>
 
-  <!-- ===== ABOUT ===== -->
+  <!-- ===== ABOUT (SUMMARY) ===== -->
   <section class="about" id="about">
     <div class="section-label">About</div>
     <h2 class="section-heading reveal">변호사 최우준</h2>
@@ -1202,43 +1177,18 @@
           항상 먼저 알 수 있도록<br>
           소통하겠습니다."
         </blockquote>
-
-        <div class="credentials">
-          <div class="credential-item">
-            <div class="credential-dot"></div>
-            <div class="credential-text">동국대학교 법학과 졸업 (우등)</div>
-          </div>
-          <div class="credential-item">
-            <div class="credential-dot"></div>
-            <div class="credential-text">충남대학교 법학전문대학원 졸업</div>
-          </div>
-          <div class="credential-item">
-            <div class="credential-dot"></div>
-            <div class="credential-text">제13회 변호사시험 합격</div>
-          </div>
-          <div class="credential-item">
-            <div class="credential-dot"></div>
-            <div class="credential-text">한국지식재산변호사협회 제10회 특허소송 경연대회 수상</div>
-          </div>
-          <div class="credential-item">
-            <div class="credential-dot"></div>
-            <div class="credential-text">아동심리상담사 1급</div>
-          </div>
-          <div class="credential-item">
-            <div class="credential-dot"></div>
-            <div class="credential-text">現 SMGS 브랜드 법률자문</div>
-          </div>
-          <div class="credential-item">
-            <div class="credential-dot"></div>
-            <div class="credential-text">現 KGM 노동조합 자문 변호사</div>
-          </div>
-        </div>
+        <p class="about-summary">
+          동국대학교 법학과를 우등 졸업하고 충남대학교 법학전문대학원을 거쳐 제13회 변호사시험에 합격했습니다.
+          형사·민사부터 엔터테인먼트·IP, 노동·의료까지 폭넓은 분야를 직접 담당하며,
+          SMGS 브랜드 법률자문과 KGM 노동조합 자문 변호사로도 활동하고 있습니다.
+        </p>
+        <a href="about.html" class="btn-outline">변호사 소개 더 보기 →</a>
       </div>
 
       <div class="about-photo-col reveal reveal-delay-2">
         <div class="about-photo-frame">
           <img
-            src="https://raw.githubusercontent.com/00jun0219/chungha-law/main/%EC%B5%9C%EC%9A%B0%EC%A4%80%EB%B3%80%ED%98%B8%EC%82%AC.jpg"
+            src="./최우준변호사.jpg"
             alt="변호사 최우준"
             class="about-photo"
           />
@@ -1289,9 +1239,9 @@
         </div>
       </div>
       <div class="footer-links">
-        <a href="#home">홈</a>
-        <a href="#practices">업무분야</a>
-        <a href="#about">소개</a>
+        <a href="index.html">홈</a>
+        <a href="services.html">업무분야</a>
+        <a href="about.html">소개</a>
         <a href="https://www.youtube.com/@별걸다하는최변" target="_blank" rel="noopener">유튜브</a>
       </div>
     </div>
@@ -1299,7 +1249,8 @@
 
   <!-- ===== FLOAT BUTTONS ===== -->
   <div class="float-btns">
-    <a href="#" class="float-btn float-kakao" title="카카오톡 상담" onclick="alert('카카오톡 링크를 입력해주세요'); return false;">💬</a>
+    <!-- TODO: 카카오톡 오픈채팅방 URL 입력 (예: https://open.kakao.com/o/xxxxxxx) -->
+    <a href="#" class="float-btn float-kakao" title="카카오톡 상담">💬</a>
     <a href="tel:02-6949-6265" class="float-btn float-call" title="전화 상담">📞</a>
   </div>
 
@@ -1309,7 +1260,8 @@
       <button class="modal-close" onclick="closeModal()" aria-label="닫기">×</button>
       <h3>상담 신청</h3>
       <p>간단한 정보를 남겨주시면 빠르게 연락드리겠습니다.</p>
-      <form onsubmit="handleSubmit(event)">
+      <!-- TODO: Formspree 엔드포인트(action) 연결 필요. 발급 후 action="https://formspree.io/f/xxxxxxxx" 로 교체 -->
+      <form id="contactForm" onsubmit="handleSubmit(event)">
         <div class="form-group">
           <label for="name">이름 <span class="req">*</span></label>
           <input type="text" id="name" name="name" placeholder="홍길동" required />
@@ -1367,10 +1319,42 @@
     function handleOverlayClick(e) { if (e.target === e.currentTarget) closeModal(); }
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-    function handleSubmit(e) {
+    // TODO: form의 action 속성에 Formspree 엔드포인트를 넣으면 아래 fetch가 실제로 전송됨
+    async function handleSubmit(e) {
       e.preventDefault();
-      alert('상담 신청이 완료되었습니다.\n빠른 시일 내로 연락드리겠습니다.');
-      closeModal();
+      const form = e.target;
+      const submitBtn = form.querySelector('.form-submit');
+      const action = form.getAttribute('action');
+
+      if (!action) {
+        alert('상담 신청이 완료되었습니다.\n빠른 시일 내로 연락드리겠습니다.');
+        closeModal();
+        form.reset();
+        return;
+      }
+
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = '전송 중...';
+      submitBtn.disabled = true;
+      try {
+        const response = await fetch(action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          alert('상담 신청이 완료되었습니다.\n빠른 시일 내로 연락드리겠습니다.');
+          form.reset();
+          closeModal();
+        } else {
+          alert('문제가 발생했습니다. 잠시 후 다시 시도해주세요.');
+        }
+      } catch (err) {
+        alert('네트워크 오류입니다. 잠시 후 다시 시도해주세요.');
+      } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
     }
   </script>
 </body>
