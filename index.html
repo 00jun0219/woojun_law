@@ -7,6 +7,7 @@
   <meta name="description" content="담당 변호사가 처음부터 끝까지 1:1로 책임지는 법률 서비스. 형사·민사·엔터·IP·부동산·가사·의료·노동 전 분야." />
   <meta name="keywords" content="변호사 최우준, 형사변호사, 민사소송 변호사, 엔터테인먼트 변호사, 지식재산권 변호사, 부동산 분쟁 변호사, 가사 이혼 변호사, 노동 산재 변호사" />
   <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://00jun0219.github.io/woojun_law/" />
 
   <!-- OG Tags -->
   <meta property="og:type" content="website" />
@@ -770,6 +771,16 @@
 
     .footer-links a:hover { color: rgba(255,255,255,0.8); }
 
+    /* ===== FAQ ===== */
+    .faq-section { background: var(--beige); padding: 6rem 5%; }
+    .faq-inner { max-width: 760px; margin: 0 auto; }
+    .faq-list { display: flex; flex-direction: column; gap: 0; margin-top: 2.5rem; }
+    .faq-item { border-bottom: 1px solid var(--beige-dark); padding: 1.75rem 0; }
+    .faq-item:first-child { border-top: 1px solid var(--beige-dark); }
+    .faq-q { font-family: var(--display); font-size: 1.05rem; font-weight: 700; color: var(--charcoal); margin-bottom: 0.75rem; line-height: 1.4; word-break: keep-all; }
+    .faq-q::before { content: 'Q. '; color: var(--terracotta); }
+    .faq-a { font-family: var(--body); font-size: 0.9rem; color: var(--warm-gray); line-height: 1.9; word-break: keep-all; padding-left: 1.5rem; }
+
     /* ===== FLOATING BUTTONS ===== */
     .float-btns {
       position: fixed;
@@ -1048,6 +1059,9 @@
         src="./최우준변호사.jpg"
         alt="변호사 최우준"
         class="hero-photo"
+        width="480"
+        height="600"
+        loading="eager"
       />
     </div>
   </section>
@@ -1124,6 +1138,36 @@
     </div>
   </section>
 
+  <!-- ===== FAQ ===== -->
+  <section class="faq-section" id="faq" aria-label="자주 묻는 질문">
+    <div class="faq-inner">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-heading reveal">자주 묻는 질문</h2>
+      <dl class="faq-list">
+        <div class="faq-item reveal">
+          <dt class="faq-q">첫 상담은 어떻게 진행되나요?</dt>
+          <dd class="faq-a">온라인 상담 신청 또는 전화(02-6949-6265)로 예약 후, 사무실 방문이나 전화 상담을 진행합니다. 첫 상담에서 사건 개요를 파악하고 진행 방향과 비용을 안내해 드립니다.</dd>
+        </div>
+        <div class="faq-item reveal reveal-delay-1">
+          <dt class="faq-q">형사 사건은 체포·구속 전에 변호인 선임이 필요한가요?</dt>
+          <dd class="faq-a">수사 초기일수록 변호인의 역할이 중요합니다. 체포·구속 직후부터 조사 방향, 진술 전략, 구속적부심 등을 조기에 대응하는 것이 결과에 큰 영향을 미칩니다.</dd>
+        </div>
+        <div class="faq-item reveal reveal-delay-2">
+          <dt class="faq-q">담당 변호사가 중간에 바뀌지 않나요?</dt>
+          <dd class="faq-a">사건을 처음 접수한 변호사 최우준이 상담부터 최종 판결까지 직접 담당합니다. 사건을 분배하거나 보조 인력에게 넘기지 않습니다.</dd>
+        </div>
+        <div class="faq-item reveal reveal-delay-3">
+          <dt class="faq-q">수임료는 어떻게 책정되나요?</dt>
+          <dd class="faq-a">사건의 종류, 난이도, 진행 단계에 따라 달라집니다. 첫 상담에서 사건 개요를 검토한 후 구체적인 비용을 투명하게 안내해 드립니다. 숨은 비용 없이 처음부터 명확히 설명드립니다.</dd>
+        </div>
+        <div class="faq-item reveal reveal-delay-1">
+          <dt class="faq-q">사무실 위치는 어디인가요?</dt>
+          <dd class="faq-a">서울 송파구 법원로 92, 6층 608호(문정동, 파트너스1)에 위치해 있습니다. 지하철 8호선 문정역 및 서울동부지방법원 인근으로 접근이 편리합니다.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
   <!-- ===== ABOUT (SUMMARY) ===== -->
   <section class="about" id="about">
     <div class="section-label">About</div>
@@ -1150,6 +1194,9 @@
             src="./최우준변호사.jpg"
             alt="변호사 최우준"
             class="about-photo"
+            width="480"
+            height="600"
+            loading="lazy"
           />
         </div>
       </div>
@@ -1208,18 +1255,16 @@
 
   <!-- ===== FLOAT BUTTONS ===== -->
   <div class="float-btns">
-    <!-- TODO: 카카오톡 오픈채팅방 URL 입력 (예: https://open.kakao.com/o/xxxxxxx) -->
     <a href="#" class="float-btn float-kakao" title="카카오톡 상담"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></a>
     <a href="tel:02-6949-6265" class="float-btn float-call" title="전화 상담"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1H7c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></a>
   </div>
 
   <!-- ===== MODAL ===== -->
   <div class="modal-overlay" id="modal-overlay" onclick="handleOverlayClick(event)">
-    <div class="modal">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       <button class="modal-close" onclick="closeModal()" aria-label="닫기">×</button>
-      <h3>상담 신청</h3>
+      <h3 id="modal-title">상담 신청</h3>
       <p>간단한 정보를 남겨주시면 빠르게 연락드리겠습니다.</p>
-      <!-- TODO: Formspree 엔드포인트(action) 연결 필요. 발급 후 action="https://formspree.io/f/xxxxxxxx" 로 교체 -->
       <form id="contactForm" onsubmit="handleSubmit(event)">
         <div class="form-group">
           <label for="name">이름 <span class="req">*</span></label>
@@ -1251,6 +1296,90 @@
     </div>
   </div>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["Attorney", "LegalService"],
+        "@id": "https://00jun0219.github.io/woojun_law/#attorney",
+        "name": "변호사 최우준",
+        "url": "https://00jun0219.github.io/woojun_law/",
+        "telephone": "02-6949-6265",
+        "openingHours": "Mo-Fr 09:00-18:00",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "법원로 92, 6층 608호",
+          "addressLocality": "문정동",
+          "addressRegion": "서울특별시 송파구",
+          "addressCountry": "KR"
+        },
+        "employee": {
+          "@type": "Person",
+          "name": "최우준",
+          "jobTitle": "변호사",
+          "alumniOf": [
+            {"@type": "EducationalOrganization", "name": "동국대학교"},
+            {"@type": "EducationalOrganization", "name": "충남대학교 법학전문대학원"}
+          ],
+          "hasCredential": [
+            {"@type": "EducationalOccupationalCredential", "name": "제13회 변호사시험 합격"},
+            {"@type": "EducationalOccupationalCredential", "name": "동국대학교 법학과 우등졸업"}
+          ]
+        },
+        "areaServed": {"@type": "Country", "name": "대한민국"},
+        "serviceType": ["형사", "민사소송", "엔터테인먼트·IP", "부동산 분쟁", "가사·상속", "의료·노동"]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://00jun0219.github.io/woojun_law/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "첫 상담은 어떻게 진행되나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "온라인 상담 신청 또는 전화(02-6949-6265)로 예약 후, 사무실 방문이나 전화 상담을 진행합니다. 첫 상담에서 사건 개요를 파악하고 진행 방향과 비용을 안내해 드립니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "형사 사건은 체포·구속 전에 변호인 선임이 필요한가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "수사 초기일수록 변호인의 역할이 중요합니다. 체포·구속 직후부터 조사 방향, 진술 전략, 구속적부심 등을 조기에 대응하는 것이 결과에 큰 영향을 미칩니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "담당 변호사가 중간에 바뀌지 않나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "사건을 처음 접수한 변호사 최우준이 상담부터 최종 판결까지 직접 담당합니다. 사건을 분배하거나 보조 인력에게 넘기지 않습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "수임료는 어떻게 책정되나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "사건의 종류, 난이도, 진행 단계에 따라 달라집니다. 첫 상담에서 사건 개요를 검토한 후 구체적인 비용을 투명하게 안내해 드립니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "사무실 위치는 어디인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "서울 송파구 법원로 92, 6층 608호(문정동, 파트너스1)에 위치해 있습니다. 지하철 8호선 문정역 및 서울동부지방법원 인근입니다."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <!-- ===== SCRIPTS ===== -->
   <script>
     const nav = document.getElementById('main-nav');
@@ -1278,7 +1407,6 @@
     function handleOverlayClick(e) { if (e.target === e.currentTarget) closeModal(); }
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-    // TODO: form의 action 속성에 Formspree 엔드포인트를 넣으면 아래 fetch가 실제로 전송됨
     async function handleSubmit(e) {
       e.preventDefault();
       const form = e.target;
