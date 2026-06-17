@@ -17,6 +17,10 @@
   <meta property="og:locale" content="ko_KR" />
   <meta name="twitter:card" content="summary_large_image" />
 
+  <!-- 폰트 preload (모바일 빠른 로딩) -->
+  <link rel="preload" href="./fonts/GANGWONSTATE-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="./fonts/ChosunSg.woff2" as="font" type="font/woff2" crossorigin />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Nanum+Myeongjo:wght@400;700;800&family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
@@ -24,15 +28,16 @@
   <style>
     @font-face {
       font-family: 'GANGWONSTATE';
-      src: url('./fonts/GANGWONSTATE-SemiBold.otf') format('opentype'),
-           url('./fonts/GANGWONSTATE-SemiBold.ttf') format('truetype');
+      src: url('./fonts/GANGWONSTATE-SemiBold.woff2') format('woff2'),
+           url('./fonts/GANGWONSTATE-SemiBold.otf') format('opentype');
       font-weight: 600;
       font-style: normal;
       font-display: swap;
     }
     @font-face {
       font-family: 'ChosunSg';
-      src: url('./fonts/ChosunSg.TTF') format('truetype');
+      src: url('./fonts/ChosunSg.woff2') format('woff2'),
+           url('./fonts/ChosunSg.TTF') format('truetype');
       font-weight: 400;
       font-style: normal;
       font-display: swap;
