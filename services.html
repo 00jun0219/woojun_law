@@ -9,6 +9,10 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://00jun0219.github.io/woojun_law/services.html" />
 
+  <!-- Favicon -->
+  <link rel="icon" href="./logo.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="./logo.svg" />
+
   <meta property="og:type" content="website" />
   <meta property="og:title" content="업무 분야 | 변호사 최우준" />
   <meta property="og:description" content="형사, 민사소송, 엔터테인먼트·지식재산권, 부동산 분쟁, 가사·상속, 의료·노동분쟁까지 담당 변호사가 직접 맡습니다." />
@@ -70,8 +74,9 @@
     body { font-family: var(--sans); background: var(--cream); color: var(--charcoal); line-height: 1.6; -webkit-font-smoothing: antialiased; }
 
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 0 5%; height: 72px; display: flex; align-items: center; justify-content: space-between; background: rgba(245, 240, 232, 0.97); backdrop-filter: blur(8px); box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
-    .nav-logo { font-family: var(--display); font-size: 1.15rem; font-weight: 700; color: var(--charcoal); text-decoration: none; letter-spacing: 0.01em; }
-    .nav-logo span { color: var(--terracotta); }
+    .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; font-family: var(--display); font-size: 1.15rem; font-weight: 700; color: var(--charcoal); text-decoration: none; letter-spacing: 0.01em; }
+    .nav-logo-mark { width: 34px; height: 34px; display: block; flex-shrink: 0; }
+    .nav-logo .accent { color: var(--terracotta); }
     .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
     .nav-links a { font-family: var(--sans); font-size: 0.875rem; font-weight: 400; color: var(--warm-gray); text-decoration: none; transition: color 0.2s; }
     .nav-links a:hover { color: var(--charcoal); }
@@ -120,8 +125,9 @@
 
     footer { background: var(--charcoal); padding: 3rem 5%; }
     .footer-inner { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 2rem; }
-    .footer-logo { font-family: var(--display); font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 0.6rem; }
-    .footer-logo span { color: var(--terracotta-light); }
+    .footer-logo { display: flex; align-items: center; gap: 0.6rem; font-family: var(--display); font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 0.8rem; }
+    .footer-logo-mark { width: 40px; height: 40px; display: block; flex-shrink: 0; }
+    .footer-logo .accent { color: var(--terracotta-light); }
     .footer-info { font-family: var(--sans); font-size: 0.78rem; font-weight: 400; color: rgba(255,255,255,0.38); line-height: 2; }
     .footer-links { display: flex; gap: 1.25rem; align-items: center; }
     .footer-links a { font-family: var(--sans); font-size: 0.78rem; color: rgba(255,255,255,0.38); text-decoration: none; transition: color 0.2s; }
@@ -161,7 +167,10 @@
 <body>
 
   <nav id="main-nav">
-    <a href="index.html" class="nav-logo"><span>변호사</span> 최우준</a>
+    <a href="index.html" class="nav-logo" aria-label="청무 법률사무소 · 변호사 최우준 홈">
+      <img src="./logo.svg" alt="" aria-hidden="true" class="nav-logo-mark" />
+      <span class="nav-logo-name"><span class="accent">변호사</span> 최우준</span>
+    </a>
     <ul class="nav-links">
       <li><a href="services.html" class="active">업무분야</a></li>
       <li><a href="about.html">변호사소개</a></li>
@@ -286,7 +295,10 @@
   <footer>
     <div class="footer-inner">
       <div>
-        <div class="footer-logo"><span>변호사</span> 최우준</div>
+        <div class="footer-logo">
+          <img src="./logo.svg" alt="" aria-hidden="true" class="footer-logo-mark" />
+          <span class="footer-logo-name"><span class="accent">변호사</span> 최우준</span>
+        </div>
         <div class="footer-info">
           서울 송파구 법원로 92, 6층 608호(문정동, 파트너스1)<br>
           사업자등록번호: 336-72-00599<br>
