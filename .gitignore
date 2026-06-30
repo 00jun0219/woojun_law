@@ -1,2 +1,5 @@
 .DS_Store
 Thumbs.db
+
+# 원본 카카오톡 사진(고용량) — 웹용 attorney-*.jpg 로 리사이즈해 사용, 원본은 배포 제외
+KakaoTalk_*.jpg
