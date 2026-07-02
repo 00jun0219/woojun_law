@@ -392,6 +392,7 @@ main.page > article {
   line-height: 1.95;
   word-break: keep-all;
   text-wrap: pretty;
+  text-align: justify;
 }
 .post-body h2 {
   font-family: var(--display);
@@ -418,6 +419,7 @@ main.page > article {
   line-height: 1.9;
   margin-bottom: 0.6rem;
   word-break: keep-all;
+  text-align: justify;
 }
 .post-body strong { font-weight: 700; color: var(--charcoal); }
 .post-body a { color: var(--terracotta); text-decoration: underline; text-underline-offset: 3px; }
@@ -445,7 +447,7 @@ main.page > article {
   text-indent: -1.3em;
 }
 .qa-q::before { content: 'Q. '; color: var(--terracotta); }
-.qa-a { font-family: var(--body); font-size: 1rem; color: #2c2c2c; line-height: 1.95; word-break: keep-all; text-wrap: pretty; padding-left: 1.3em; text-indent: -1.3em; }
+.qa-a { font-family: var(--body); font-size: 1rem; color: #2c2c2c; line-height: 1.95; word-break: keep-all; text-wrap: pretty; padding-left: 1.3em; text-indent: -1.3em; text-align: justify; }
 .qa-a::before { content: 'A. '; color: var(--terracotta); font-weight: 700; }
 
 /* ===== CTA (글 하단 상담 유도) ===== */
