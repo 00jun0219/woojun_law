@@ -5,6 +5,8 @@
    경로: /assets/blog.css — url()은 이 파일 기준 상대경로(../ = 루트)
    ===================================================================== */
 
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css');
+
 /* ===== FONTS ===== */
 @font-face {
   font-family: 'GANGWONSTATE';
@@ -38,8 +40,8 @@
   --white: #FFFFFF;
   --serif: 'Cormorant Garamond', 'Nanum Myeongjo', serif;
   --display: 'GANGWONSTATE', 'Nanum Myeongjo', serif;
-  --sans: 'ChosunSg', 'Nanum Gothic', sans-serif;
-  --body: 'ChosunSg', 'Nanum Gothic', sans-serif;
+  --sans: 'Pretendard Variable', Pretendard, 'Nanum Gothic', sans-serif;
+  --body: 'Pretendard Variable', Pretendard, 'Nanum Gothic', sans-serif;
 }
 
 /* ===== RESET & BASE ===== */
@@ -439,9 +441,11 @@ main.page > article {
   line-height: 1.45;
   margin-bottom: 0.85rem;
   word-break: keep-all;
+  padding-left: 1.3em;
+  text-indent: -1.3em;
 }
 .qa-q::before { content: 'Q. '; color: var(--terracotta); }
-.qa-a { font-family: var(--body); font-size: 1rem; color: #2c2c2c; line-height: 1.95; word-break: keep-all; text-wrap: pretty; }
+.qa-a { font-family: var(--body); font-size: 1rem; color: #2c2c2c; line-height: 1.95; word-break: keep-all; text-wrap: pretty; padding-left: 1.3em; text-indent: -1.3em; }
 .qa-a::before { content: 'A. '; color: var(--terracotta); font-weight: 700; }
 
 /* ===== CTA (글 하단 상담 유도) ===== */
