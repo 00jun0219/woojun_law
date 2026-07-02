@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>본문 글씨체 비교 (임시)</title>
+
+  <!-- 로컬 서체 -->
+  <link rel="preload" href="/fonts/ChosunSg.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/GANGWONSTATE-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
+  <!-- Pretendard (CDN) -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+
+  <style>
+    @font-face {
+      font-family: 'GANGWONSTATE';
+      src: url('/fonts/GANGWONSTATE-SemiBold.woff2') format('woff2');
+      font-weight: 600; font-display: swap;
+    }
+    @font-face {
+      font-family: 'ChosunSg';
+      src: url('/fonts/ChosunSg.woff2') format('woff2');
+      font-weight: 400; font-display: swap;
+    }
+    :root {
+      --cream:#F5F0E8; --beige-dark:#E4DFD5; --terracotta:#C4704A;
+      --charcoal:#1C1C1C; --warm-gray:#6B6560; --white:#fff;
+    }
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { background: var(--cream); color: var(--charcoal); padding: 3rem 1.25rem 5rem; -webkit-font-smoothing: antialiased; }
+    .wrap { max-width: 760px; margin: 0 auto; }
+    .intro { text-align:center; margin-bottom: 2.5rem; font-family:'Pretendard Variable',sans-serif; }
+    .intro h1 { font-family:'GANGWONSTATE',serif; font-size: 1.7rem; margin-bottom: .6rem; }
+    .intro p { color: var(--warm-gray); font-size: .92rem; line-height:1.7; }
+
+    .opt { margin-bottom: 2.5rem; }
+    .opt-label {
+      font-family:'Pretendard Variable',sans-serif; font-weight:700; font-size:.9rem;
+      color: var(--terracotta); margin-bottom: .75rem; padding-left:.2rem;
+    }
+    .card {
+      background: var(--white); border:1px solid var(--beige-dark);
+      border-radius: 14px; padding: 2rem 2.25rem;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+    }
+    .sample-h { font-family:'GANGWONSTATE',serif; font-weight:700; font-size:1.4rem; line-height:1.35; margin-bottom:1.25rem; word-break:keep-all; }
+    .card p { font-size:1rem; line-height:1.95; color:#2c2c2c; word-break:keep-all; margin-bottom:1.1rem; }
+    .q { font-family:'GANGWONSTATE',serif; font-weight:700; font-size:1.1rem; color:var(--charcoal); margin:1.5rem 0 .6rem; }
+    .q::before { content:'Q. '; color:var(--terracotta); }
+    .card p.a::before { content:'A. '; color:var(--terracotta); font-weight:700; }
+
+    /* ① Pretendard */
+    .font-pretendard p, .font-pretendard .q-body { font-family:'Pretendard Variable', Pretendard, sans-serif; }
+    /* ② 현재 명조 */
+    .font-chosun p { font-family:'ChosunSg', serif; }
+    /* ③ 명조 + 조정 */
+    .font-chosun-adj p { font-family:'ChosunSg', serif; font-size:1.06rem; line-height:2.1; letter-spacing:0.005em; text-rendering:optimizeLegibility; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="intro">
+      <h1>본문 글씨체 비교</h1>
+      <p>같은 글을 3가지 본문 서체로 보여드립니다. 제목·Q는 현재 서체(GANGWONSTATE) 그대로 두고, <b>본문 문단만</b> 다릅니다.<br>천천히 읽어보고 편한 걸 골라주세요. (①②③ 중)</p>
+    </div>
+
+    <!-- ① Pretendard -->
+    <div class="opt">
+      <div class="opt-label">① Pretendard (산세리프) — 추천</div>
+      <div class="card font-pretendard">
+        <h2 class="sample-h">형사 사건, 체포·구속 전에 변호사를 선임해야 하나요?</h2>
+        <p>형사 사건에서 가장 많이 받는 질문 중 하나가 “언제부터 변호사가 필요하냐”는 것입니다. 결론부터 말씀드리면, 변호인의 역할은 수사 초기 단계일수록 크게 작용합니다.</p>
+        <p>형사 절차는 경찰·검찰의 수사 단계에서 사실관계와 진술의 큰 틀이 잡히고, 이때 정리된 내용이 이후 재판까지 영향을 미칩니다. 체포나 구속이 이루어진 뒤보다, 그 전에 조사 방향과 진술 전략을 미리 검토하는 편이 대응의 폭이 넓습니다.</p>
+        <div class="q">수사 초기에 변호인은 어떤 일을 하나요?</div>
+        <p class="a">사건 기록과 혐의 내용을 검토해 쟁점을 파악하고, 의뢰인이 조사에서 어떤 점을 어떻게 진술할지 함께 준비합니다. 또한 진술거부권 등 피의자의 방어권을 안내하고, 조사 참여를 통해 절차가 적법하게 진행되는지 확인합니다.</p>
+      </div>
+    </div>
+
+    <!-- ② 현재 명조 -->
+    <div class="opt">
+      <div class="opt-label">② 현재 명조 (ChosunSg) — 지금 상태</div>
+      <div class="card font-chosun">
+        <h2 class="sample-h">형사 사건, 체포·구속 전에 변호사를 선임해야 하나요?</h2>
+        <p>형사 사건에서 가장 많이 받는 질문 중 하나가 “언제부터 변호사가 필요하냐”는 것입니다. 결론부터 말씀드리면, 변호인의 역할은 수사 초기 단계일수록 크게 작용합니다.</p>
+        <p>형사 절차는 경찰·검찰의 수사 단계에서 사실관계와 진술의 큰 틀이 잡히고, 이때 정리된 내용이 이후 재판까지 영향을 미칩니다. 체포나 구속이 이루어진 뒤보다, 그 전에 조사 방향과 진술 전략을 미리 검토하는 편이 대응의 폭이 넓습니다.</p>
+        <div class="q">수사 초기에 변호인은 어떤 일을 하나요?</div>
+        <p class="a">사건 기록과 혐의 내용을 검토해 쟁점을 파악하고, 의뢰인이 조사에서 어떤 점을 어떻게 진술할지 함께 준비합니다. 또한 진술거부권 등 피의자의 방어권을 안내하고, 조사 참여를 통해 절차가 적법하게 진행되는지 확인합니다.</p>
+      </div>
+    </div>
+
+    <!-- ③ 명조 + 조정 -->
+    <div class="opt">
+      <div class="opt-label">③ 명조 유지 + 크기·줄간격 조정</div>
+      <div class="card font-chosun-adj">
+        <h2 class="sample-h">형사 사건, 체포·구속 전에 변호사를 선임해야 하나요?</h2>
+        <p>형사 사건에서 가장 많이 받는 질문 중 하나가 “언제부터 변호사가 필요하냐”는 것입니다. 결론부터 말씀드리면, 변호인의 역할은 수사 초기 단계일수록 크게 작용합니다.</p>
+        <p>형사 절차는 경찰·검찰의 수사 단계에서 사실관계와 진술의 큰 틀이 잡히고, 이때 정리된 내용이 이후 재판까지 영향을 미칩니다. 체포나 구속이 이루어진 뒤보다, 그 전에 조사 방향과 진술 전략을 미리 검토하는 편이 대응의 폭이 넓습니다.</p>
+        <div class="q">수사 초기에 변호인은 어떤 일을 하나요?</div>
+        <p class="a">사건 기록과 혐의 내용을 검토해 쟁점을 파악하고, 의뢰인이 조사에서 어떤 점을 어떻게 진술할지 함께 준비합니다. 또한 진술거부권 등 피의자의 방어권을 안내하고, 조사 참여를 통해 절차가 적법하게 진행되는지 확인합니다.</p>
+      </div>
+    </div>
+
+    <div class="intro" style="margin-top:1rem;">
+      <p>골랐으면 “①/②/③” 알려주세요. 적용하고 이 미리보기 페이지는 삭제할게요.</p>
+    </div>
+  </div>
+</body>
+</html>
