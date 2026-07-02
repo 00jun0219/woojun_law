@@ -809,6 +809,65 @@
     .faq-q::before { content: 'Q. '; color: var(--terracotta); }
     .faq-a { font-family: var(--body); font-size: 0.9rem; color: var(--warm-gray); line-height: 1.9; word-break: keep-all; text-wrap: pretty; padding-left: 1.5rem; }
 
+    /* ===== 최근 칼럼 ===== */
+    .home-column { background: var(--cream); }
+    .home-column-head { text-align: center; margin-bottom: 3rem; }
+    .home-column-head .section-sub { margin: 0.5rem auto 0; }
+    .home-column-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .hc-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--white);
+      border: 1px solid var(--beige-dark);
+      border-radius: 12px;
+      padding: 1.75rem;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+    .hc-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.07); border-color: var(--terracotta-pale); }
+    .hc-card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+    .hc-badge {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 0.28rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid currentColor;
+      color: var(--terracotta);
+      line-height: 1;
+    }
+    .hc-badge.qa { color: var(--dark-green); }
+    .hc-badge.news { color: var(--terracotta-light); }
+    .hc-date { font-family: var(--sans); font-size: 0.74rem; color: var(--warm-gray-light); }
+    .hc-title {
+      font-family: var(--display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--charcoal);
+      margin-bottom: 0.65rem;
+      word-break: keep-all;
+      text-wrap: balance;
+    }
+    .hc-excerpt {
+      font-family: var(--body);
+      font-size: 0.88rem;
+      color: var(--warm-gray);
+      line-height: 1.8;
+      word-break: keep-all;
+      flex-grow: 1;
+    }
+    .hc-more { font-family: var(--sans); font-size: 0.8rem; font-weight: 700; color: var(--terracotta); margin-top: 1.15rem; }
+    .home-column-cta { text-align: center; margin-top: 2.5rem; }
+
     /* ===== FLOATING BUTTONS ===== */
     .float-btns {
       position: fixed;
@@ -1032,6 +1091,7 @@
       .practices-grid { grid-template-columns: 1fr; }
       .footer-inner { flex-direction: column; }
       .float-btns { bottom: 1.5rem; right: 1.5rem; }
+      .home-column-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -1252,6 +1312,38 @@
       </a>
     </div>
   </div>
+
+  <!-- ===== 최근 칼럼 ===== -->
+  <section class="home-column" aria-label="최근 칼럼">
+    <div class="home-column-head reveal">
+      <div class="section-label">Column</div>
+      <h2 class="section-heading">최근 칼럼</h2>
+      <p class="section-sub">법률 칼럼·Q&amp;A·사례·소식을 변호사가 직접 정리합니다.</p>
+    </div>
+    <div class="home-column-grid">
+      <a class="hc-card reveal" href="/column/jazz-musicians-unpaid-fees/">
+        <div class="hc-card-top">
+          <span class="hc-badge news">소식</span>
+          <span class="hc-date">2026.07.02</span>
+        </div>
+        <div class="hc-title">재즈 뮤지션 연주료 미지급 사태, 피해 연주자를 대리합니다</div>
+        <div class="hc-excerpt">서울 마포구 재즈 클럽의 연주료 미지급 사태에서 피해 연주자들을 대리해 고소장을 제출했습니다.</div>
+        <div class="hc-more">자세히 보기 →</div>
+      </a>
+      <a class="hc-card reveal reveal-delay-1" href="/column/criminal-defense-early-lawyer/">
+        <div class="hc-card-top">
+          <span class="hc-badge qa">Q&amp;A</span>
+          <span class="hc-date">2026.07.02</span>
+        </div>
+        <div class="hc-title">형사 사건, 체포·구속 전에 변호사를 선임해야 하나요?</div>
+        <div class="hc-excerpt">수사 초기 단계에서 변호인의 역할이 왜 중요한지, 체포·구속 전후 대응을 단계별로 정리했습니다.</div>
+        <div class="hc-more">자세히 보기 →</div>
+      </a>
+    </div>
+    <div class="home-column-cta reveal">
+      <a href="/column/" class="btn-outline">칼럼 전체보기 →</a>
+    </div>
+  </section>
 
   <!-- ===== CTA SECTION ===== -->
   <div class="cta-section">
