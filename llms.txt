@@ -24,6 +24,6 @@
 - 유튜브 〈별걸다하는 최변〉 운영
 
 ## 페이지
-- 홈: https://00jun0219.github.io/woojun_law/
-- 업무분야: https://00jun0219.github.io/woojun_law/services.html
-- 변호사소개: https://00jun0219.github.io/woojun_law/about.html
+- 홈: https://chung-mu.com/
+- 업무분야: https://chung-mu.com/services.html
+- 변호사소개: https://chung-mu.com/about.html

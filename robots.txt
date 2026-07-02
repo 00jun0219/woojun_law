@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://00jun0219.github.io/woojun_law/sitemap.xml
+Sitemap: https://chung-mu.com/sitemap.xml
