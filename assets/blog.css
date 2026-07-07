@@ -390,7 +390,7 @@ main.page > article {
   font-size: 1rem;
   color: #2c2c2c;
   line-height: 1.95;
-  word-break: keep-all;
+  word-break: normal;
   text-wrap: pretty;
   text-align: justify;
 }
@@ -418,7 +418,7 @@ main.page > article {
   color: #2c2c2c;
   line-height: 1.9;
   margin-bottom: 0.6rem;
-  word-break: keep-all;
+  word-break: normal;
   text-align: justify;
 }
 .post-body strong { font-weight: 700; color: var(--charcoal); }
@@ -431,7 +431,8 @@ main.page > article {
   font-family: var(--body);
   color: var(--warm-gray);
   line-height: 1.85;
-  word-break: keep-all;
+  word-break: normal;
+  text-align: justify;
 }
 /* Q&A 블록 */
 .qa-block { border-top: 1px solid var(--beige-dark); padding-top: 1.75rem; }
@@ -447,7 +448,7 @@ main.page > article {
   text-indent: -1.3em;
 }
 .qa-q::before { content: 'Q. '; color: var(--terracotta); }
-.qa-a { font-family: var(--body); font-size: 1rem; color: #2c2c2c; line-height: 1.95; word-break: keep-all; text-wrap: pretty; padding-left: 1.3em; text-indent: -1.3em; text-align: justify; }
+.qa-a { font-family: var(--body); font-size: 1rem; color: #2c2c2c; line-height: 1.95; word-break: normal; text-wrap: pretty; padding-left: 1.3em; text-indent: -1.3em; text-align: justify; }
 .qa-a::before { content: 'A. '; color: var(--terracotta); font-weight: 700; }
 
 /* ===== CTA (글 하단 상담 유도) ===== */
