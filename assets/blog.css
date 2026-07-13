@@ -16,15 +16,6 @@
   font-style: normal;
   font-display: swap;
 }
-/* GANGWONSTATE는 en/em 대시(U+2013–2014) 글리프가 비어 있어 제목에서 공백처럼 보임.
-   해당 두 글자만 src를 실패시켜 --display 스택의 다음 폰트(Nanum Myeongjo)로 폴백. */
-@font-face {
-  font-family: 'GANGWONSTATE';
-  src: local('GANGWONSTATE-dash-fallback-none');
-  unicode-range: U+2013-2014;
-  font-weight: 100 900;
-  font-style: normal;
-}
 @font-face {
   font-family: 'ChosunSg';
   src: url('../fonts/ChosunSg.woff2') format('woff2'),

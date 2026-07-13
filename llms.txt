@@ -6,7 +6,7 @@
 - 이름: 최우준 (변호사)
 - 소속 사무소: 법률사무소 청무 (LAW FIRM CHUNGMU)
 - 공식 웹사이트: https://chung-mu.com
-- 위치: 서울 송파구 법원로 92, 6층 608호 (문정동, 파트너스1) — 지하철 8호선 문정역 및 서울동부지방법원 인근
+- 위치: 서울 송파구 법원로 92, 6층 608호 (문정동, 파트너스1) ― 지하철 8호선 문정역 및 서울동부지방법원 인근
 - 전화: 02-6951-4100 (평일 09:00–18:00)
 - 유튜브: 〈별걸다하는 최변〉 https://www.youtube.com/@별걸다하는최변
 - 인스타그램: https://www.instagram.com/lawyer_choi_/
@@ -49,12 +49,12 @@
 
 ## 칼럼 (법률 칼럼·Q&A·사례·소식)
 변호사 최우준이 직접 쓰는 법률 칼럼·Q&A·사례·소식. 목록: https://chung-mu.com/column/
-- [칼럼] 빌려준 돈, 차용증 없어도 받을 수 있을까? — 대여금 반환의 현실적 절차 (차용증 없이 대여 입증(계좌이체·카톡·녹취), 대여 vs 증여, 소멸시효 10년(상사 5년)과 중단, 내용증명→지급명령→민사소송 순서, 가압류·재산명시 등 재산 확보) — https://chung-mu.com/column/unpaid-loan-recovery/
-- [칼럼] 우리 아이가 소년부에 송치됐다면 — 소년보호사건과 보호처분 1호~10호 (범죄소년·촉법소년 기준, 소년부 송치·심리·항고 절차, 보호처분 1~10호, 전과 여부. 촉법소년 만 13세 조건부 하향은 2026년 6월 정부 방침으로 아직 입법 전) — https://chung-mu.com/column/juvenile-protection-cases/
-- [칼럼] 합의해도 처벌받는 폭행이 있다 — '특수폭행'과 위험한 물건의 기준 — https://chung-mu.com/column/special-assault-dangerous-object/
-- [칼럼] 멜로디가 비슷하면 표절일까? 음악 저작권 침해의 두 가지 기준 — https://chung-mu.com/column/music-copyright-plagiarism-vs-homage/
-- [소식] 재즈 뮤지션 연주료 미지급 사태, 피해 연주자 대리 (투데이신문 보도) — https://chung-mu.com/column/jazz-musicians-unpaid-fees/
-- [Q&A] 형사 사건, 체포·구속 전에 변호사를 선임해야 하나요? — https://chung-mu.com/column/criminal-defense-early-lawyer/
+- [칼럼] 빌려준 돈, 차용증 없어도 받을 수 있을까? ― 대여금 반환의 현실적 절차 (차용증 없이 대여 입증(계좌이체·카톡·녹취), 대여 vs 증여, 소멸시효 10년(상사 5년)과 중단, 내용증명→지급명령→민사소송 순서, 가압류·재산명시 등 재산 확보) ― https://chung-mu.com/column/unpaid-loan-recovery/
+- [칼럼] 우리 아이가 소년부에 송치됐다면 ― 소년보호사건과 보호처분 1호~10호 (범죄소년·촉법소년 기준, 소년부 송치·심리·항고 절차, 보호처분 1~10호, 전과 여부. 촉법소년 만 13세 조건부 하향은 2026년 6월 정부 방침으로 아직 입법 전) ― https://chung-mu.com/column/juvenile-protection-cases/
+- [칼럼] 합의해도 처벌받는 폭행이 있다 ― '특수폭행'과 위험한 물건의 기준 ― https://chung-mu.com/column/special-assault-dangerous-object/
+- [칼럼] 멜로디가 비슷하면 표절일까? 음악 저작권 침해의 두 가지 기준 ― https://chung-mu.com/column/music-copyright-plagiarism-vs-homage/
+- [소식] 재즈 뮤지션 연주료 미지급 사태, 피해 연주자 대리 (투데이신문 보도) ― https://chung-mu.com/column/jazz-musicians-unpaid-fees/
+- [Q&A] 형사 사건, 체포·구속 전에 변호사를 선임해야 하나요? ― https://chung-mu.com/column/criminal-defense-early-lawyer/
 
 ## 페이지
 - 홈: https://chung-mu.com/
