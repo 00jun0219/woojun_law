@@ -674,4 +674,13 @@ footer { background: var(--charcoal); padding: 3rem 5%; }
   .float-btns { bottom: 1.5rem; right: 1.5rem; }
   .page { padding-top: 104px; }
   main.page > article { padding: 1.75rem 1.4rem; }
+
+  /* 모바일: 한국 뉴스 앱 본문 배치 관행 — 좁은 폭에서는 양쪽맞춤이 오히려 깔끔함(단어 잘림 허용) */
+  .post-body p,
+  .post-body li,
+  .post-body blockquote,
+  .qa-a {
+    text-align: justify;
+    word-break: normal;
+  }
 }
