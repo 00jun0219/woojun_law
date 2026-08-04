@@ -382,17 +382,18 @@ main.page > article {
 .article-byline a { color: var(--charcoal); font-weight: 700; text-decoration: none; }
 .article-byline a:hover { color: var(--terracotta); }
 
-/* 본문 타이포그래피 */
+/* 본문 타이포그래피 (2026-08-04 가독성 개선: justify→left, 측정폭 제한, word-break 원복) */
 .post-body { padding-top: 2rem; }
-.post-body > * + * { margin-top: 1.5rem; }
+.post-body > * + * { margin-top: 1.65rem; }
 .post-body p {
+  max-width: 640px;
   font-family: var(--body);
-  font-size: 1rem;
+  font-size: 1.0625rem;
   color: #2c2c2c;
-  line-height: 1.95;
-  word-break: normal;
+  line-height: 1.85;
+  word-break: keep-all;
   text-wrap: pretty;
-  text-align: justify;
+  text-align: left;
 }
 .post-body h2 {
   font-family: var(--display);
@@ -400,7 +401,7 @@ main.page > article {
   font-weight: 700;
   color: var(--charcoal);
   line-height: 1.4;
-  margin-top: 2.75rem;
+  margin-top: 3.25rem;
   word-break: keep-all;
 }
 .post-body h3 {
@@ -408,35 +409,37 @@ main.page > article {
   font-size: 1.18rem;
   font-weight: 700;
   color: var(--charcoal);
-  margin-top: 2rem;
+  margin-top: 2.25rem;
   word-break: keep-all;
 }
-.post-body ul, .post-body ol { padding-left: 1.4rem; }
+.post-body ul, .post-body ol { max-width: 640px; padding-left: 1.4rem; }
 .post-body li {
   font-family: var(--body);
-  font-size: 1rem;
+  font-size: 1.0625rem;
   color: #2c2c2c;
-  line-height: 1.9;
-  margin-bottom: 0.6rem;
-  word-break: normal;
-  text-align: justify;
+  line-height: 1.8;
+  margin-bottom: 0.7rem;
+  word-break: keep-all;
+  text-align: left;
 }
 .post-body strong { font-weight: 700; color: var(--charcoal); }
 .post-body a { color: var(--terracotta); text-decoration: underline; text-underline-offset: 3px; }
 .post-body blockquote {
+  max-width: 640px;
   border-left: 3px solid var(--terracotta);
   background: var(--beige);
   padding: 1.1rem 1.4rem;
   border-radius: 0 8px 8px 0;
   font-family: var(--body);
   color: var(--warm-gray);
-  line-height: 1.85;
-  word-break: normal;
-  text-align: justify;
+  line-height: 1.8;
+  word-break: keep-all;
+  text-align: left;
 }
 /* Q&A 블록 */
 .qa-block { border-top: 1px solid var(--beige-dark); padding-top: 1.75rem; }
 .qa-q {
+  max-width: 640px;
   font-family: var(--display);
   font-size: 1.22rem;
   font-weight: 700;
@@ -448,7 +451,7 @@ main.page > article {
   text-indent: -1.3em;
 }
 .qa-q::before { content: 'Q. '; color: var(--terracotta); }
-.qa-a { font-family: var(--body); font-size: 1rem; color: #2c2c2c; line-height: 1.95; word-break: normal; text-wrap: pretty; padding-left: 1.3em; text-indent: -1.3em; text-align: justify; }
+.qa-a { max-width: 640px; font-family: var(--body); font-size: 1.0625rem; color: #2c2c2c; line-height: 1.85; word-break: keep-all; text-wrap: pretty; padding-left: 1.3em; text-indent: -1.3em; text-align: left; }
 .qa-a::before { content: 'A. '; color: var(--terracotta); font-weight: 700; }
 
 /* ===== CTA (글 하단 상담 유도) ===== */

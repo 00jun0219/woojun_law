@@ -20,9 +20,15 @@
   </url>
   <url>
     <loc>https://chung-mu.com/column/</loc>
-    <lastmod>2026-07-19</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://chung-mu.com/column/landlord-obligations/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://chung-mu.com/column/jeonse-deposit-return/</loc>
