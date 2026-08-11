@@ -382,7 +382,7 @@ main.page > article {
 .article-byline a { color: var(--charcoal); font-weight: 700; text-decoration: none; }
 .article-byline a:hover { color: var(--terracotta); }
 
-/* 본문 타이포그래피 (2026-08-04 가독성 개선: justify→left, 측정폭 제한, word-break 원복) */
+/* 본문 타이포그래피 (2026-08-11 양쪽맞춤 전환: 전 화면폭 justify + word-break normal) */
 .post-body { padding-top: 2rem; }
 .post-body > * + * { margin-top: 1.65rem; }
 .post-body p {
@@ -391,9 +391,9 @@ main.page > article {
   font-size: 1.0625rem;
   color: #2c2c2c;
   line-height: 1.85;
-  word-break: keep-all;
+  word-break: normal;
   text-wrap: pretty;
-  text-align: left;
+  text-align: justify;
 }
 .post-body h2 {
   font-family: var(--display);
@@ -419,8 +419,8 @@ main.page > article {
   color: #2c2c2c;
   line-height: 1.8;
   margin-bottom: 0.7rem;
-  word-break: keep-all;
-  text-align: left;
+  word-break: normal;
+  text-align: justify;
 }
 .post-body strong { font-weight: 700; color: var(--charcoal); }
 .post-body a { color: var(--terracotta); text-decoration: underline; text-underline-offset: 3px; }
@@ -433,8 +433,8 @@ main.page > article {
   font-family: var(--body);
   color: var(--warm-gray);
   line-height: 1.8;
-  word-break: keep-all;
-  text-align: left;
+  word-break: normal;
+  text-align: justify;
 }
 /* Q&A 블록 */
 .qa-block { border-top: 1px solid var(--beige-dark); padding-top: 1.75rem; }
@@ -451,7 +451,7 @@ main.page > article {
   text-indent: -1.3em;
 }
 .qa-q::before { content: 'Q. '; color: var(--terracotta); }
-.qa-a { max-width: 640px; font-family: var(--body); font-size: 1.0625rem; color: #2c2c2c; line-height: 1.85; word-break: keep-all; text-wrap: pretty; padding-left: 1.3em; text-indent: -1.3em; text-align: left; }
+.qa-a { max-width: 640px; font-family: var(--body); font-size: 1.0625rem; color: #2c2c2c; line-height: 1.85; word-break: normal; text-wrap: pretty; padding-left: 1.3em; text-indent: -1.3em; text-align: justify; }
 .qa-a::before { content: 'A. '; color: var(--terracotta); font-weight: 700; }
 
 /* ===== CTA (글 하단 상담 유도) ===== */
@@ -674,13 +674,4 @@ footer { background: var(--charcoal); padding: 3rem 5%; }
   .float-btns { bottom: 1.5rem; right: 1.5rem; }
   .page { padding-top: 104px; }
   main.page > article { padding: 1.75rem 1.4rem; }
-
-  /* 모바일: 한국 뉴스 앱 본문 배치 관행 — 좁은 폭에서는 양쪽맞춤이 오히려 깔끔함(단어 잘림 허용) */
-  .post-body p,
-  .post-body li,
-  .post-body blockquote,
-  .qa-a {
-    text-align: justify;
-    word-break: normal;
-  }
 }
