@@ -10,7 +10,7 @@
 - 절차 해설형 → `column/payment-order/index.html`
 - 제도 총론형 → `column/juvenile-protection-cases/index.html`
 
-헤더 nav / 모바일 메뉴 / footer / float-btns / 상담 모달 / 폰트·CSS 인클루드는 **100% 동일**하다. 손대지 말고 그대로 둔다.
+헤더 nav / 모바일 메뉴 / footer / float-btns / 상담 모달 / 폰트·CSS 인클루드 / `<head>`의 `/assets/analytics.js`(GA4)는 **100% 동일**하다. 손대지 말고 그대로 둔다.
 
 ## 1. 바꿔야 하는 것 (빠짐없이)
 

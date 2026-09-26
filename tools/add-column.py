@@ -36,6 +36,7 @@ def add(slug, title, excerpt, excerpt_short, date):
     url = f"https://chung-mu.com/column/{slug}/"
     dot = date.replace("-", ".")
     assert os.path.exists(os.path.join(ROOT, "column", slug, "index.html")), "칼럼 페이지가 없음"
+    assert "/assets/analytics.js" in read(f"column/{slug}/index.html"), "<head>에 GA4 analytics.js 누락"
 
     # 1) 허브: 카드 + ItemList (반드시 "@type": "ItemList" 뒤의 itemListElement에만 삽입)
     s = read(HUB)
