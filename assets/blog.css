@@ -16,21 +16,14 @@
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: 'ChosunSg';
-  src: url('../fonts/ChosunSg.woff2') format('woff2'),
-       url('../fonts/ChosunSg.TTF') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 
 /* ===== TOKENS ===== */
 :root {
   --cream: #F5F0E8;
   --beige: #EFECE5;
   --beige-dark: #E4DFD5;
-  --terracotta: #C4704A;
+  --terracotta: #A85634;
+  --terracotta-dark: #8F4629;
   --terracotta-light: #E8906A;
   --terracotta-pale: #F5E6DC;
   --dark-green: #2D4A3E;
@@ -38,7 +31,7 @@
   --warm-gray: #6B6560;
   --warm-gray-light: #9C9490;
   --white: #FFFFFF;
-  --serif: 'Cormorant Garamond', 'Nanum Myeongjo', serif;
+  --serif: Georgia, 'Pretendard Variable', serif;
   --display: 'GANGWONSTATE', 'Nanum Myeongjo', serif;
   --sans: 'Pretendard Variable', Pretendard, 'Nanum Gothic', sans-serif;
   --body: 'Pretendard Variable', Pretendard, 'Nanum Gothic', sans-serif;
@@ -109,7 +102,7 @@ body {
   font-weight: 700 !important;
   transition: background 0.2s !important;
 }
-.nav-cta:hover { background: var(--terracotta-light) !important; }
+.nav-cta:hover { background: var(--terracotta-dark) !important; }
 .nav-hamburger {
   display: none;
   flex-direction: column;
@@ -164,7 +157,7 @@ body {
   text-decoration: none;
   transition: background 0.2s, transform 0.2s;
 }
-.btn-primary:hover { background: var(--terracotta-light); transform: translateY(-2px); }
+.btn-primary:hover { background: var(--terracotta-dark); transform: translateY(-2px); }
 .btn-outline {
   display: inline-flex;
   align-items: center;
@@ -203,7 +196,7 @@ main.page > article {
 .breadcrumb {
   font-family: var(--sans);
   font-size: 0.78rem;
-  color: var(--warm-gray-light);
+  color: var(--warm-gray);
   margin-bottom: 1.5rem;
   display: flex;
   flex-wrap: wrap;
@@ -314,7 +307,7 @@ main.page > article {
   justify-content: space-between;
   margin-bottom: 1rem;
 }
-.post-card-date { font-family: var(--sans); font-size: 0.74rem; color: var(--warm-gray-light); }
+.post-card-date { font-family: var(--sans); font-size: 0.74rem; color: var(--warm-gray); }
 .post-card-title {
   font-family: var(--display);
   font-size: 1.2rem;
@@ -344,7 +337,7 @@ main.page > article {
   grid-column: 1 / -1;
   text-align: center;
   font-family: var(--body);
-  color: var(--warm-gray-light);
+  color: var(--warm-gray);
   padding: 3rem 0;
 }
 
@@ -357,7 +350,7 @@ main.page > article {
   flex-wrap: wrap;
   margin-bottom: 1.1rem;
 }
-.article-date { font-family: var(--sans); font-size: 0.8rem; color: var(--warm-gray-light); }
+.article-date { font-family: var(--sans); font-size: 0.8rem; color: var(--warm-gray); }
 .article-title {
   font-family: var(--display);
   font-size: clamp(1.9rem, 3.6vw, 2.7rem);
@@ -478,7 +471,7 @@ main.page > article {
   word-break: keep-all;
 }
 .post-cta .btn-primary { background: var(--terracotta); }
-.post-cta .btn-primary:hover { background: var(--terracotta-light); }
+.post-cta .btn-primary:hover { background: var(--terracotta-dark); }
 
 /* 관련 링크 */
 .post-related {
@@ -534,14 +527,14 @@ footer { background: var(--charcoal); padding: 3rem 5%; }
   font-family: var(--sans);
   font-size: 0.78rem;
   font-weight: 400;
-  color: rgba(255,255,255,0.38);
+  color: rgba(255,255,255,0.6);
   line-height: 2;
 }
 .footer-links { display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap; }
 .footer-links a {
   font-family: var(--sans);
   font-size: 0.78rem;
-  color: rgba(255,255,255,0.38);
+  color: rgba(255,255,255,0.6);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -651,12 +644,12 @@ footer { background: var(--charcoal); padding: 3rem 5%; }
   transition: background 0.2s;
   margin-top: 0.5rem;
 }
-.form-submit:hover { background: var(--terracotta-light); }
+.form-submit:hover { background: var(--terracotta-dark); }
 .form-submit:disabled { opacity: 0.6; cursor: not-allowed; }
 
 /* ===== ANIMATIONS ===== */
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
-.reveal.visible { opacity: 1; transform: translateY(0); }
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.js .reveal.visible { opacity: 1; transform: translateY(0); }
 .reveal-delay-1 { transition-delay: 0.1s; }
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
@@ -674,4 +667,26 @@ footer { background: var(--charcoal); padding: 3rem 5%; }
   .float-btns { bottom: 1.5rem; right: 1.5rem; }
   .page { padding-top: 104px; }
   main.page > article { padding: 1.75rem 1.4rem; }
+}
+
+/* ===== 접근성·모바일 보강 (index/about/services 인라인 + blog.css 동일) ===== */
+:focus-visible { outline: 2px solid var(--terracotta); outline-offset: 3px; }
+.modal-overlay { visibility: hidden; transition: opacity 0.3s, visibility 0.3s; }
+.modal-overlay.active { visibility: visible; }
+.modal .form-status { font-size: 0.85rem; line-height: 1.6; margin: 0.9rem 0 0; }
+.modal .form-status:empty { display: none; }
+.modal .form-status.ok { color: var(--dark-green); font-weight: 700; }
+.modal .form-status.err { color: #B3261E; }
+.float-btn span, .float-consult { display: none; }
+@media (max-width: 600px) {
+  body { padding-bottom: calc(68px + env(safe-area-inset-bottom)); }
+  .float-btns { left: 0; right: 0; bottom: 0; flex-direction: row; gap: 0.5rem; padding: 0.6rem 0.75rem calc(0.6rem + env(safe-area-inset-bottom)); background: rgba(245,240,232,0.97); box-shadow: 0 -1px 0 rgba(0,0,0,0.08); }
+  .float-btn { flex: 1; width: auto; height: 48px; border-radius: 6px; gap: 0.4rem; font-family: var(--sans); font-size: 0.85rem; font-weight: 700; box-shadow: none; }
+  .float-btn:hover { transform: none; }
+  .float-btn span, .float-consult { display: inline-flex; }
+  .float-consult { background: var(--terracotta); color: var(--white); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-delay: 0s !important; transition-duration: 0.01ms !important; transition-delay: 0s !important; }
 }
