@@ -17,7 +17,7 @@
   if (reveals.length) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0 });
+    }, { threshold: 0.1, rootMargin: '0px 0px -8% 0px' });
     reveals.forEach(el => observer.observe(el));
   }
 

@@ -61,6 +61,7 @@
       --beige-dark: #E4DFD5;
       --terracotta: #A85634;
       --terracotta-dark: #8F4629;
+      --terracotta-bright: #C4704A; /* 큰 글씨·장식 전용 (작은 글씨엔 --terracotta) */
       --terracotta-light: #E8906A;
       --terracotta-pale: #F5E6DC;
       --dark-green: #2D4A3E;
@@ -80,7 +81,7 @@
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 0 5%; height: 72px; display: flex; align-items: center; justify-content: space-between; background: rgba(245, 240, 232, 0.97); backdrop-filter: blur(8px); box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
     .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; font-family: var(--display); font-size: 1.15rem; font-weight: 700; color: var(--charcoal); text-decoration: none; letter-spacing: 0.01em; }
     .nav-logo-mark { width: 34px; height: 34px; display: block; flex-shrink: 0; }
-    .nav-logo .accent { color: var(--terracotta); }
+    .nav-logo .accent { color: var(--terracotta-bright); }
     .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
     .nav-links a { font-family: var(--sans); font-size: 0.875rem; font-weight: 400; color: var(--warm-gray); text-decoration: none; transition: color 0.2s; }
     .nav-links a:hover { color: var(--charcoal); }
@@ -110,7 +111,7 @@
     .reveal-delay-3 { transition-delay: 0.3s; }
 
     .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
-    .detail-card { background: var(--white); padding: 2.5rem 2.25rem; border-radius: 8px; border: 1px solid var(--beige-dark); border-top: 3px solid var(--terracotta); display: flex; flex-direction: column; scroll-margin-top: 90px; transition: transform 0.3s, box-shadow 0.3s; }
+    .detail-card { background: var(--white); padding: 2.5rem 2.25rem; border-radius: 8px; border: 1px solid var(--beige-dark); border-top: 3px solid var(--terracotta-bright); display: flex; flex-direction: column; scroll-margin-top: 90px; transition: transform 0.3s, box-shadow 0.3s; }
     .detail-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
     .detail-header { display: flex; align-items: center; gap: 1.1rem; margin-bottom: 1.25rem; }
     .detail-icon { font-size: 1.6rem; width: 54px; height: 54px; background: var(--terracotta-pale); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
@@ -118,13 +119,13 @@
     .detail-desc { font-family: var(--body); font-size: 0.875rem; color: var(--warm-gray); line-height: 1.75; word-break: keep-all; margin-bottom: 1.5rem; flex-grow: 1; }
     .detail-list { list-style: none; padding-top: 1.25rem; border-top: 1px dashed var(--beige-dark); }
     .detail-list li { font-family: var(--body); font-size: 0.84rem; font-weight: 400; color: var(--charcoal); margin-bottom: 0.6rem; padding-left: 1.25rem; position: relative; word-break: keep-all; }
-    .detail-list li::before { content: '✓'; position: absolute; left: 0; color: var(--terracotta); font-weight: bold; }
+    .detail-list li::before { content: '✓'; position: absolute; left: 0; color: var(--terracotta-bright); font-weight: bold; }
     .detail-list li:last-child { margin-bottom: 0; }
 
     .attorney-band { background: var(--beige); padding: 5rem 5%; }
     .band-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 360px 1fr; gap: 3.5rem; align-items: center; }
     .band-photo-frame { position: relative; display: inline-block; }
-    .band-photo-frame::before { content: ''; position: absolute; top: -14px; left: 14px; right: -14px; bottom: 14px; border: 2px solid var(--terracotta); border-radius: 8px; opacity: 0.35; }
+    .band-photo-frame::before { content: ''; position: absolute; top: -14px; left: 14px; right: -14px; bottom: 14px; border: 2px solid var(--terracotta-bright); border-radius: 8px; opacity: 0.35; }
     .band-photo { width: 100%; max-width: 360px; height: 340px; object-fit: cover; object-position: top center; border-radius: 8px; display: block; position: relative; z-index: 1; }
     .band-label { font-family: var(--sans); font-size: 0.72rem; font-weight: 700; color: var(--terracotta); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.75rem; }
     .band-heading { font-family: var(--display); font-size: clamp(1.5rem, 2.6vw, 2rem); font-weight: 700; line-height: 1.3; color: var(--charcoal); margin-bottom: 1rem; word-break: keep-all; text-wrap: balance; }
@@ -132,7 +133,7 @@
     .band-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; color: var(--charcoal); font-family: var(--sans); font-size: 0.9rem; font-weight: 400; padding: 0.875rem 1.75rem; border-radius: 4px; border: 1.5px solid var(--beige-dark); text-decoration: none; transition: border-color 0.2s, transform 0.2s; }
     .band-btn:hover { border-color: var(--warm-gray); transform: translateY(-2px); }
 
-    .cta-section { background: var(--terracotta); padding: 5rem 5%; text-align: center; }
+    .cta-section { background: linear-gradient(135deg, var(--terracotta-bright) 0%, var(--terracotta) 100%); padding: 5rem 5%; text-align: center; }
     .cta-heading { font-family: var(--display); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--white); margin-bottom: 0.75rem; }
     .cta-sub { font-size: 0.9rem; color: rgba(255,255,255,0.78); margin-bottom: 2rem; }
     .btn-white { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--white); color: var(--terracotta); font-size: 0.9rem; font-weight: 700; padding: 0.9rem 2rem; border-radius: 4px; text-decoration: none; transition: opacity 0.2s, transform 0.2s; }
@@ -234,8 +235,8 @@
   </div>
 
   <div class="sub-hero">
-    <h1 class="reveal">당신의 권리를 지키는 가장 확실한 전략</h1>
-    <p class="reveal reveal-delay-1">의뢰인의 사건을 직접 맡아 처음부터 끝까지 책임집니다.</p>
+    <h1 class="reveal">사건마다 필요한 일은 다릅니다</h1>
+    <p class="reveal reveal-delay-1">분야별로 주로 맡는 사건과 하는 일을 정리했습니다.</p>
   </div>
 
   <section>
@@ -244,10 +245,10 @@
 
         <div class="detail-card reveal" id="criminal">
           <div class="detail-header">
-            <div class="detail-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="3" x2="12" y2="20"/><path d="M5 21h14"/><path d="M5 8l7-4 7 4"/><path d="M3 14l2-5 2 5a2 2 0 01-4 0z"/><path d="M17 14l2-5 2 5a2 2 0 01-4 0z"/></svg></div>
+            <div class="detail-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta-bright)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="3" x2="12" y2="20"/><path d="M5 21h14"/><path d="M5 8l7-4 7 4"/><path d="M3 14l2-5 2 5a2 2 0 01-4 0z"/><path d="M17 14l2-5 2 5a2 2 0 01-4 0z"/></svg></div>
             <div class="detail-title">형사 사건</div>
           </div>
-          <p class="detail-desc">수사 초기 단계부터 공판까지, 사건의 본질을 정확히 파악해 억울함을 해소하고 빈틈없는 방어권을 행사합니다.</p>
+          <p class="detail-desc">경찰 조사 전 진술 준비부터 재판까지 함께합니다. 피의자·피고인 변호뿐 아니라 피해자 쪽 고소 대리도 맡습니다.</p>
           <ul class="detail-list">
             <li>사기 · 횡령 · 배임 등 경제범죄</li>
             <li>성범죄 사건 방어 및 고소 대리</li>
@@ -258,10 +259,10 @@
 
         <div class="detail-card reveal reveal-delay-1" id="civil">
           <div class="detail-header">
-            <div class="detail-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+            <div class="detail-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta-bright)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
             <div class="detail-title">민사 소송</div>
           </div>
-          <p class="detail-desc">계약 불이행, 손해배상, 복잡한 채권채무 관계 속에서 의뢰인의 권리를 가장 신속하고 정확하게 되찾아 드립니다.</p>
+          <p class="detail-desc">계약 분쟁, 손해배상, 빌려준 돈을 못 받은 사건까지. 가압류로 재산부터 묶어 둘지, 지급명령으로 빨리 끝낼지 사건에 맞는 절차를 고릅니다.</p>
           <ul class="detail-list">
             <li>손해배상 및 부당이득 반환</li>
             <li>대여금 및 투자금 회수</li>
@@ -272,10 +273,10 @@
 
         <div class="detail-card reveal reveal-delay-2" id="entertainment">
           <div class="detail-header">
-            <div class="detail-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <div class="detail-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta-bright)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
             <div class="detail-title">엔터테인먼트 · IP</div>
           </div>
-          <p class="detail-desc">미디어·콘텐츠 산업 생태계에 대한 이해를 바탕으로, 아티스트의 권리 보호와 리스크 관리를 위한 법률 자문을 제공합니다.</p>
+          <p class="detail-desc">아티스트·제작사·창작자가 겪는 계약과 저작권 문제를 다룹니다. 전속계약 분쟁, 음원·영상 무단 사용, 악성 댓글 대응까지 맡습니다.</p>
           <ul class="detail-list">
             <li>전속계약 효력정지 가처분 및 해지</li>
             <li>저작권 · 상표권 침해 소송</li>
@@ -286,10 +287,10 @@
 
         <div class="detail-card reveal" id="realestate">
           <div class="detail-header">
-            <div class="detail-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><rect x="9" y="14" width="2" height="7"/><rect x="13" y="14" width="2" height="7"/><rect x="9" y="9" width="2" height="2"/><rect x="13" y="9" width="2" height="2"/></svg></div>
+            <div class="detail-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta-bright)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><rect x="9" y="14" width="2" height="7"/><rect x="13" y="14" width="2" height="7"/><rect x="9" y="9" width="2" height="2"/><rect x="13" y="9" width="2" height="2"/></svg></div>
             <div class="detail-title">부동산 분쟁</div>
           </div>
-          <p class="detail-desc">지역주택조합 피해 구제, 명도소송, 임대차 분쟁 등 막대한 재산이 걸린 사안에서 치밀한 법리 검토로 손실을 최소화합니다.</p>
+          <p class="detail-desc">지역주택조합 탈퇴, 명도, 전세보증금처럼 큰돈이 묶이는 분쟁입니다. 계약서와 등기부부터 확인해 돌려받을 수 있는 길을 찾습니다.</p>
           <ul class="detail-list">
             <li>지역주택조합 탈퇴 및 납입금 환불</li>
             <li>명도소송 및 임대차 보증금 분쟁</li>
@@ -300,10 +301,10 @@
 
         <div class="detail-card reveal reveal-delay-1" id="family">
           <div class="detail-header">
-            <div class="detail-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg></div>
+            <div class="detail-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta-bright)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg></div>
             <div class="detail-title">가사 · 상속</div>
           </div>
-          <p class="detail-desc">이혼, 양육권, 상속 재산 분할 등 가족 간의 예민한 분쟁을 의뢰인의 마음까지 헤아리며 합리적인 방향으로 이끕니다.</p>
+          <p class="detail-desc">이혼, 양육권, 상속처럼 가족 사이의 분쟁입니다. 감정이 앞서기 쉬운 사건일수록 받을 수 있는 것과 지켜야 할 것을 먼저 정리합니다.</p>
           <ul class="detail-list">
             <li>이혼 소송 및 위자료 청구</li>
             <li>친권 · 양육권 및 면접교섭권</li>
@@ -314,10 +315,10 @@
 
         <div class="detail-card reveal reveal-delay-2" id="medical">
           <div class="detail-header">
-            <div class="detail-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12h6M12 9v6"/></svg></div>
+            <div class="detail-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta-bright)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12h6M12 9v6"/></svg></div>
             <div class="detail-title">의료 · 노동</div>
           </div>
-          <p class="detail-desc">고도의 주의가 요구되는 의료 사고의 과실 입증부터 부당 해고, 산재에 이르기까지 철저한 증거 수집으로 합당한 배상을 도출합니다.</p>
+          <p class="detail-desc">의료사고는 진료기록 분석이, 해고·임금·산재 사건은 증거 확보가 중요합니다. 어떤 자료부터 모아야 하는지 함께 정리합니다.</p>
           <ul class="detail-list">
             <li>의료사고 손해배상 청구</li>
             <li>업무상 과실치사상 형사 대응</li>
@@ -338,15 +339,15 @@
       <div class="band-text reveal reveal-delay-1">
         <div class="band-label">담당 변호사</div>
         <h2 class="band-heading">이 모든 분야, 변호사 최우준이 직접 맡습니다</h2>
-        <p class="band-desc">사건을 접수한 변호사가 상담부터 최종 판결까지 1:1로 책임집니다. 분야를 가리지 않고 사건의 맥락을 통합적으로 이해하는 것이 더 나은 해법을 찾는 길이라고 믿습니다.</p>
+        <p class="band-desc">상담한 변호사가 판결까지 1:1로 책임집니다. 여러 분야가 얽힌 사건도 한 사람이 처음부터 전체를 보고 판단합니다.</p>
         <a href="about.html" class="band-btn">변호사 소개 보기 →</a>
       </div>
     </div>
   </section>
 
   <div class="cta-section">
-    <h2 class="cta-heading reveal">어떤 분야든, 직접 상담해 드립니다</h2>
-    <p class="cta-sub reveal">사건의 성격이 모호하더라도 괜찮습니다. 먼저 이야기를 들어보겠습니다.</p>
+    <h2 class="cta-heading reveal">어느 분야인지 몰라도 괜찮습니다</h2>
+    <p class="cta-sub reveal">상황을 들어보고, 어떤 절차가 맞는지부터 안내해 드립니다.</p>
     <a href="#" class="btn-white reveal reveal-delay-1" onclick="openModal(); return false;">온라인 상담 신청</a>
   </div>
 

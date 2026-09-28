@@ -66,6 +66,7 @@
       --beige-dark: #E4DFD5;
       --terracotta: #A85634;
       --terracotta-dark: #8F4629;
+      --terracotta-bright: #C4704A; /* 큰 글씨·장식 전용 (작은 글씨엔 --terracotta) */
       --terracotta-light: #E8906A;
       --terracotta-pale: #F5E6DC;
       --dark-green: #2D4A3E;
@@ -121,7 +122,7 @@
     }
 
     .nav-logo-mark { width: 34px; height: 34px; display: block; flex-shrink: 0; }
-    .nav-logo .accent { color: var(--terracotta); }
+    .nav-logo .accent { color: var(--terracotta-bright); }
 
     .nav-links {
       display: flex;
@@ -237,8 +238,7 @@
     }
 
     .hero-heading em {
-      font-style: normal;
-      color: var(--terracotta);
+      color: var(--terracotta-bright);
     }
 
     .hero-sub {
@@ -341,7 +341,7 @@
       right: 2%;
       width: 90%;
       height: 92%;
-      border: 2px solid var(--terracotta);
+      border: 2px solid var(--terracotta-bright);
       border-radius: 200px 200px 0 0;
       opacity: 0.25;
     }
@@ -409,7 +409,7 @@
     }
 
     .value-card:hover {
-      border-color: var(--terracotta);
+      border-color: var(--terracotta-bright);
       transform: translateY(-4px);
     }
 
@@ -485,7 +485,7 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 3px;
-      background: var(--terracotta);
+      background: var(--terracotta-bright);
       transform: scaleX(0);
       transform-origin: left;
       transition: transform 0.3s ease;
@@ -494,7 +494,7 @@
     .practice-card:hover::before { transform: scaleX(1); }
 
     .practice-card:hover {
-      border-color: var(--terracotta);
+      border-color: var(--terracotta-bright);
       transform: translateY(-3px);
     }
 
@@ -552,11 +552,12 @@
       font-family: var(--display);
       font-size: clamp(1.25rem, 2.2vw, 1.6rem);
       font-weight: 400;
+      font-style: italic;
       color: var(--warm-gray);
       line-height: 1.65;
       margin-bottom: 1.75rem;
       padding-left: 1.5rem;
-      border-left: 3px solid var(--terracotta);
+      border-left: 3px solid var(--terracotta-bright);
     }
 
     .about-summary {
@@ -586,7 +587,7 @@
       left: 16px;
       right: -16px;
       bottom: 16px;
-      border: 2px solid var(--terracotta);
+      border: 2px solid var(--terracotta-bright);
       border-radius: 8px;
       opacity: 0.35;
     }
@@ -668,7 +669,7 @@
 
     /* ===== CTA SECTION ===== */
     .cta-section {
-      background: var(--terracotta);
+      background: linear-gradient(135deg, var(--terracotta-bright) 0%, var(--terracotta) 100%);
       padding: 80px 5%;
       text-align: center;
     }
@@ -816,9 +817,8 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
-      max-width: 900px;
-      margin: 0 auto;
     }
+    @media (min-width: 1600px) { .home-column-grid { grid-template-columns: repeat(4, 1fr); } }
     .hc-card {
       display: flex;
       flex-direction: column;
@@ -1158,9 +1158,9 @@
         <em>제가 직접</em> 맡겠습니다
       </h1>
       <p class="hero-sub">
-        담당 변호사가 처음 상담부터 최종 판결까지<br>
-        1:1로 직접 책임집니다.<br>
-        법률은 어렵지 않게, 소통은 솔직하게.
+        첫 상담부터 판결이 나올 때까지<br>
+        제가 1:1로 맡습니다.<br>
+        진행 상황은 묻기 전에 먼저 알려드립니다.
       </p>
       <div class="hero-ctas">
         <a href="#" class="btn-primary" onclick="openModal(); return false;">상담 신청 →</a>
@@ -1185,23 +1185,23 @@
 
   <!-- ===== CORE VALUES ===== -->
   <section class="values">
-    <div class="section-label">Why Us</div>
-    <h2 class="section-heading reveal">저와 함께하면<br>이런 점이 다릅니다</h2>
+    <div class="section-label">How I Work</div>
+    <h2 class="section-heading reveal">사건을 맡으면<br>이렇게 일합니다</h2>
     <div class="values-grid">
       <div class="value-card reveal reveal-delay-1">
-        <div class="value-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="3" x2="12" y2="20"/><path d="M5 21h14"/><path d="M5 8l7-4 7 4"/><path d="M3 14l2-5 2 5a2 2 0 01-4 0z"/><path d="M17 14l2-5 2 5a2 2 0 01-4 0z"/></svg></div>
+        <div class="value-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta-bright)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="3" x2="12" y2="20"/><path d="M5 21h14"/><path d="M5 8l7-4 7 4"/><path d="M3 14l2-5 2 5a2 2 0 01-4 0z"/><path d="M17 14l2-5 2 5a2 2 0 01-4 0z"/></svg></div>
         <div class="value-title">직접 담당</div>
-        <p class="value-desc">사건을 접수한 그 변호사가 끝까지 맡습니다. 중간에 다른 사람이 끼어들지 않습니다.</p>
+        <p class="value-desc">상담한 변호사가 서면 작성과 재판 출석까지 직접 합니다. 사건이 중간에 다른 사람에게 넘어가지 않습니다.</p>
       </div>
       <div class="value-card reveal reveal-delay-2">
-        <div class="value-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
-        <div class="value-title">명료한 소통</div>
-        <p class="value-desc">어려운 법률 용어 없이 쉽게 설명합니다. 진행 상황은 항상 먼저 알려드립니다.</p>
+        <div class="value-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta-bright)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+        <div class="value-title">먼저 알려드립니다</div>
+        <p class="value-desc">기일이 잡히거나 상대방 서면이 오면 먼저 연락드립니다. 법률 용어는 풀어서 설명합니다.</p>
       </div>
       <div class="value-card reveal reveal-delay-3">
-        <div class="value-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="var(--terracotta)"/></svg></div>
+        <div class="value-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--terracotta-bright)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="var(--terracotta)"/></svg></div>
         <div class="value-title">폭넓은 업무 분야</div>
-        <p class="value-desc">형사·민사부터 엔터테인먼트·IP, 부동산·노동·의료까지. 한 변호사가 처음부터 끝까지 직접 맡습니다.</p>
+        <p class="value-desc">형사·민사부터 엔터테인먼트·IP, 부동산, 가사, 의료·노동까지 다룹니다. 형사와 민사가 함께 걸린 사건도 한 사람이 전체를 보고 판단합니다.</p>
       </div>
     </div>
   </section>
@@ -1290,12 +1290,29 @@
     </div>
   </section>
 
+  <!-- ===== YOUTUBE ===== -->
+  <div class="youtube" id="youtube">
+    <div class="youtube-inner">
+      <div>
+        <div class="youtube-label reveal">YouTube Channel</div>
+        <h2 class="youtube-title reveal">별걸다하는 최변</h2>
+        <p class="youtube-desc reveal reveal-delay-1">
+          일상에서 부딪히는 법 문제를 짧고 쉽게 풀어 올립니다.<br>
+          실제 판례 이야기도 함께 다룹니다.
+        </p>
+      </div>
+      <a href="https://www.youtube.com/@별걸다하는최변" target="_blank" rel="noopener" class="youtube-btn">
+        ▶ 채널 구독하기
+      </a>
+    </div>
+  </div>
+
   <!-- ===== 최근 칼럼 ===== -->
   <section class="home-column" aria-label="최근 칼럼">
     <div class="home-column-head reveal">
       <div class="section-label">Column</div>
       <h2 class="section-heading">최근 칼럼</h2>
-      <p class="section-sub">법률 칼럼·Q&amp;A·사례·소식을 변호사가 직접 정리합니다.</p>
+      <p class="section-sub">상담에서 자주 받는 질문을 글로 정리했습니다.</p>
     </div>
     <div class="home-column-grid">
       <a class="hc-card reveal" href="/column/consensual-divorce-procedure/">
@@ -1352,15 +1369,15 @@
         </div>
         <div class="faq-item reveal reveal-delay-1">
           <dt class="faq-q">형사 사건은 체포·구속 전에 변호인 선임이 필요한가요?</dt>
-          <dd class="faq-a">수사 초기일수록 변호인의 역할이 중요합니다. 체포·구속 직후부터 조사 방향, 진술 전략, 구속적부심 등을 조기에 대응하는 것이 결과에 큰 영향을 미칩니다.</dd>
+          <dd class="faq-a">필수는 아니지만 빠를수록 좋습니다. 첫 조사에서 한 진술은 나중에 바로잡기 어려워서, 조사 전에 진술 방향을 함께 정리해 두는 것이 도움이 됩니다. 이미 체포·구속되었다면 구속적부심이나 보석 청구도 바로 검토합니다.</dd>
         </div>
         <div class="faq-item reveal reveal-delay-2">
           <dt class="faq-q">담당 변호사가 중간에 바뀌지 않나요?</dt>
-          <dd class="faq-a">사건을 처음 접수한 변호사 최우준이 상담부터 최종 판결까지 직접 담당합니다. 사건을 분배하거나 보조 인력에게 넘기지 않습니다.</dd>
+          <dd class="faq-a">바뀌지 않습니다. 상담한 변호사 최우준이 판결이 나올 때까지 직접 맡고, 다른 변호사나 직원에게 사건을 넘기지 않습니다.</dd>
         </div>
         <div class="faq-item reveal reveal-delay-3">
           <dt class="faq-q">수임료는 어떻게 책정되나요?</dt>
-          <dd class="faq-a">사건의 종류, 난이도, 진행 단계에 따라 달라집니다. 첫 상담에서 사건 개요를 검토한 후 구체적인 비용을 투명하게 안내해 드립니다. 숨은 비용 없이 처음부터 명확히 설명드립니다.</dd>
+          <dd class="faq-a">사건의 종류와 난이도, 진행 단계에 따라 다릅니다. 첫 상담에서 사건을 검토한 뒤 비용을 구체적으로 안내하고, 인지대·송달료처럼 따로 드는 비용도 미리 말씀드립니다.</dd>
         </div>
         <div class="faq-item reveal reveal-delay-1">
           <dt class="faq-q">사무실 위치는 어디인가요?</dt>
@@ -1370,27 +1387,10 @@
     </div>
   </section>
 
-  <!-- ===== YOUTUBE ===== -->
-  <div class="youtube" id="youtube">
-    <div class="youtube-inner">
-      <div>
-        <div class="youtube-label reveal">YouTube Channel</div>
-        <h2 class="youtube-title reveal">별걸다하는 최변</h2>
-        <p class="youtube-desc reveal reveal-delay-1">
-          어렵게만 느껴지는 법률 이야기를 쉽고 재미있게 풀어드립니다.<br>
-          일상 속 법률 상식부터 실제 판례 분석까지, 직접 만나보세요.
-        </p>
-      </div>
-      <a href="https://www.youtube.com/@별걸다하는최변" target="_blank" rel="noopener" class="youtube-btn">
-        ▶ 채널 구독하기
-      </a>
-    </div>
-  </div>
-
   <!-- ===== CTA SECTION ===== -->
   <div class="cta-section">
-    <h2 class="cta-heading reveal">지금 바로 상담하세요</h2>
-    <p class="cta-sub reveal">사건을 함께 검토하고, 최선의 방향을 찾아드립니다.</p>
+    <h2 class="cta-heading reveal">사건 이야기를 들려주세요</h2>
+    <p class="cta-sub reveal">상황을 듣고, 지금 할 수 있는 일부터 정리해 드립니다.</p>
     <div class="cta-actions reveal reveal-delay-1">
       <a href="#" class="btn-white" onclick="openModal(); return false;">온라인 상담 신청</a>
       <a href="tel:0507-1379-6089" class="btn-white-outline"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1H7c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg> 전화 상담</a>
@@ -1605,7 +1605,7 @@
             "name": "형사 사건은 체포·구속 전에 변호인 선임이 필요한가요?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "수사 초기일수록 변호인의 역할이 중요합니다. 체포·구속 직후부터 조사 방향, 진술 전략, 구속적부심 등을 조기에 대응하는 것이 결과에 큰 영향을 미칩니다."
+              "text": "필수는 아니지만 빠를수록 좋습니다. 첫 조사에서 한 진술은 나중에 바로잡기 어려워서, 조사 전에 진술 방향을 함께 정리해 두는 것이 도움이 됩니다. 이미 체포·구속되었다면 구속적부심이나 보석 청구도 바로 검토합니다."
             }
           },
           {
@@ -1613,7 +1613,7 @@
             "name": "담당 변호사가 중간에 바뀌지 않나요?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "사건을 처음 접수한 변호사 최우준이 상담부터 최종 판결까지 직접 담당합니다. 사건을 분배하거나 보조 인력에게 넘기지 않습니다."
+              "text": "바뀌지 않습니다. 상담한 변호사 최우준이 판결이 나올 때까지 직접 맡고, 다른 변호사나 직원에게 사건을 넘기지 않습니다."
             }
           },
           {
@@ -1621,7 +1621,7 @@
             "name": "수임료는 어떻게 책정되나요?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "사건의 종류, 난이도, 진행 단계에 따라 달라집니다. 첫 상담에서 사건 개요를 검토한 후 구체적인 비용을 투명하게 안내해 드립니다."
+              "text": "사건의 종류와 난이도, 진행 단계에 따라 다릅니다. 첫 상담에서 사건을 검토한 뒤 비용을 구체적으로 안내하고, 인지대·송달료처럼 따로 드는 비용도 미리 말씀드립니다."
             }
           },
           {
