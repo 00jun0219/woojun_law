@@ -3,6 +3,7 @@
 #
 # 사용: python tools/add-column.py <slug> "<제목>" "<허브 요약(2~3문장)>" "<홈 요약(1~2문장)>" [YYYY-MM-DD]
 # 검증: 실행 후 `python tools/add-column.py --check` 로 JSON-LD 파싱·첫 항목 확인.
+# 썸네일: 등록 후 커버 이미지를 추가했으면 `python tools/add-column.py --thumbs` 로 홈 카드 썸네일 재동기화.
 import io, json, re, sys, datetime, os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -18,6 +19,28 @@ def jsonld(s):
     return json.loads(m.group(1))
 
 
+# 홈 카드 썸네일: 칼럼 og:image가 자기 폴더의 이미지(커버)면 그 사진, 아니면 분야색 패널
+THUMB_TONE = {"형사": "criminal", "민사": "civil", "부동산": "realestate", "가사·상속": "family", "엔터테인먼트·IP": "ip"}
+
+
+def thumb(slug):
+    page = read(f"column/{slug}/index.html")
+    m = re.search(r'<meta property="og:image" content="https://chung-mu\.com(/column/' + re.escape(slug) + r'/[^"]+)"', page)
+    if m:
+        return f'        <div class="hc-thumb"><img src="{m.group(1)}" alt="" loading="lazy" /></div>\n'
+    post = next((x for x in jsonld(page)["@graph"] if x["@type"] in ("BlogPosting", "NewsArticle")), {})
+    sec = post.get("articleSection", "칼럼")
+    return f'        <div class="hc-thumb hc-thumb-{THUMB_TONE.get(sec, "etc")}"><span>{sec}</span></div>\n'
+
+
+def sync_thumbs():
+    s = read(HOME)
+    s = re.sub(r'        <div class="hc-thumb[^\n]*\n', '', s)
+    s = re.sub(r'(      <a class="hc-card[^"]*" href="/column/([^/"]+)/">\n)', lambda m: m.group(1) + thumb(m.group(2)), s)
+    write(HOME, s)
+    print("home thumbs =", s.count('<div class="hc-thumb'))
+
+
 def check():
     d = jsonld(read(HUB))
     bc = next(x for x in d["@graph"] if x["@type"] == "BreadcrumbList")["itemListElement"]
@@ -28,7 +51,8 @@ def check():
     cards = len(re.findall(r'<a class="post-card', read(HUB)))
     assert cards == len(il), f"허브 카드 {cards} != ItemList {len(il)}"
     print("hub cards =", cards)
-    print("home cards =", len(re.findall(r'<a class="hc-card', read(HOME))))
+    home = read(HOME)
+    print("home cards =", len(re.findall(r'<a class="hc-card', home)), "/ thumbs =", home.count('<div class="hc-thumb'))
     print("sitemap urls =", read(SITEMAP).count("<url>"))
 
 
@@ -63,7 +87,7 @@ def add(slug, title, excerpt, excerpt_short, date):
     s = read(HOME)
     st = s.index('<div class="home-column-grid">'); en = s.index('<div class="home-column-cta reveal">')
     cards = re.findall(r'      <a class="hc-card[^\n]*\n(?:.*?\n)*?      </a>\n', s[st:en])
-    new = (f'      <a class="hc-card reveal" href="/column/{slug}/">\n        <div class="hc-card-top">\n'
+    new = (f'      <a class="hc-card reveal" href="/column/{slug}/">\n' + thumb(slug) + '        <div class="hc-card-top">\n'
            f'          <span class="hc-badge">칼럼</span>\n          <span class="hc-date">{dot}</span>\n        </div>\n'
            f'        <div class="hc-title">{title}</div>\n        <div class="hc-excerpt">{excerpt_short}</div>\n'
            f'        <div class="hc-more">자세히 보기 →</div>\n      </a>\n')
@@ -89,6 +113,8 @@ def add(slug, title, excerpt, excerpt_short, date):
 if __name__ == "__main__":
     if sys.argv[1:] == ["--check"]:
         check()
+    elif sys.argv[1:] == ["--thumbs"]:
+        sync_thumbs()
     elif len(sys.argv) >= 5:
         add(*sys.argv[1:5], sys.argv[5] if len(sys.argv) > 5 else datetime.date.today().isoformat())
     else:

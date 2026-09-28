@@ -20,6 +20,7 @@
 - `article:section`은 **항상 `"칼럼"` 고정** (글의 형식). JSON-LD의 `articleSection`과 다른 값이다.
 - `theme-color`는 `#2D665C` 그대로.
 - `og:image`는 원본 칼럼 값을 그대로 두되, 히어로 이미지를 만들지 않으므로 **`column/<slug>/cover.jpg`를 가리키게 바꾸지 말 것** (파일이 없으면 깨진다).
+- 홈 '최근 칼럼' 카드 썸네일은 `add-column.py`가 자동 생성한다: `og:image`가 자기 폴더 이미지면 그 사진, 아니면 JSON-LD `articleSection` 분야색 패널. 커버를 나중에 추가했다면 메인이 `python tools/add-column.py --thumbs`로 재동기화.
 
 ### body
 - breadcrumb 마지막 `<span>` — 링크 없는 짧은 제목
