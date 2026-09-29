@@ -4,10 +4,17 @@
 # 사용: python tools/add-column.py <slug> "<제목>" "<허브 요약(2~3문장)>" "<홈 요약(1~2문장)>" [YYYY-MM-DD]
 # 검증: 실행 후 `python tools/add-column.py --check` 로 JSON-LD 파싱·첫 항목 확인.
 # 썸네일: 등록 후 커버 이미지를 추가했으면 `python tools/add-column.py --thumbs` 로 홈 카드 썸네일 재동기화.
-import io, json, re, sys, datetime, os
+# 피드: 등록 시 feed.xml(RSS)을 칼럼 JSON-LD에서 통째로 재생성한다. 수동 재생성은 `--feed`.
+# 색인 알림: push·라이브 반영 **후** `python tools/add-column.py --ping <slug> [...]` (IndexNow → 네이버·Bing).
+#           slug 없이 `--ping`이면 사이트맵 전체 URL을 보낸다.
+import io, json, re, sys, datetime, os, glob, urllib.request
+from email.utils import format_datetime
+from xml.sax.saxutils import escape
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-HUB, HOME, SITEMAP = "column/index.html", "index.html", "sitemap.xml"
+HUB, HOME, SITEMAP, FEED = "column/index.html", "index.html", "sitemap.xml", "feed.xml"
+NL = chr(10)
+INDEXNOW_KEY = "2cd5b9db8eee988f3732f3bcefff2f53"  # 루트 <key>.txt 와 같아야 한다
 
 
 def read(p): return io.open(os.path.join(ROOT, p), encoding="utf-8").read()
@@ -41,6 +48,36 @@ def sync_thumbs():
     print("home thumbs =", s.count('<div class="hc-thumb'))
 
 
+def feed():
+    posts = []
+    for f in glob.glob(os.path.join(ROOT, "column", "*", "index.html")):
+        p = next(x for x in jsonld(io.open(f, encoding="utf-8").read())["@graph"] if x["@type"] in ("BlogPosting", "NewsArticle"))
+        posts.append(p)
+    posts.sort(key=lambda p: (p["datePublished"], p["url"]), reverse=True)
+    rfc = lambda d: format_datetime(datetime.datetime.fromisoformat(d[:10] + "T09:00:00+09:00"))
+    head = ['<?xml version="1.0" encoding="UTF-8"?>', '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">', "  <channel>",
+            "    <title>칼럼 | 변호사 최우준 · 법률사무소 청무</title>", "    <link>https://chung-mu.com/column/</link>",
+            '    <atom:link href="https://chung-mu.com/feed.xml" rel="self" type="application/rss+xml" />',
+            "    <description>변호사 최우준(법률사무소 청무)의 법률 칼럼</description>", "    <language>ko</language>",
+            f"    <lastBuildDate>{rfc(posts[0]['datePublished'])}</lastBuildDate>"]
+    items = [line for p in posts for line in (
+        "    <item>", f"      <title>{escape(p['headline'])}</title>", f"      <link>{p['url']}</link>",
+        f"      <guid>{p['url']}</guid>", f"      <pubDate>{rfc(p['datePublished'])}</pubDate>",
+        f"      <category>{escape(p.get('articleSection', '칼럼'))}</category>",
+        f"      <description>{escape(p.get('description', ''))}</description>", "    </item>")]
+    write(FEED, NL.join(head + items + ["  </channel>", "</rss>", ""]))
+    print("feed items =", len(posts))
+
+
+def ping(slugs):
+    urls = [f"https://chung-mu.com/column/{x}/" for x in slugs] or re.findall(r"<loc>([^<]+)</loc>", read(SITEMAP))
+    body = json.dumps({"host": "chung-mu.com", "key": INDEXNOW_KEY, "keyLocation": f"https://chung-mu.com/{INDEXNOW_KEY}.txt",
+                       "urlList": urls}).encode()
+    req = urllib.request.Request("https://api.indexnow.org/indexnow", body, {"Content-Type": "application/json; charset=utf-8"})
+    with urllib.request.urlopen(req, timeout=20) as r:  # 200/202 = 접수. 4xx는 HTTPError로 올라온다
+        print("IndexNow", r.status, "/", len(urls), "urls")
+
+
 def check():
     d = jsonld(read(HUB))
     bc = next(x for x in d["@graph"] if x["@type"] == "BreadcrumbList")["itemListElement"]
@@ -54,6 +91,9 @@ def check():
     home = read(HOME)
     print("home cards =", len(re.findall(r'<a class="hc-card', home)), "/ thumbs =", home.count('<div class="hc-thumb'))
     print("sitemap urls =", read(SITEMAP).count("<url>"))
+    n = read(FEED).count("<item>")
+    assert n == len(il), f"피드 {n} != ItemList {len(il)} (--feed 로 재생성)"
+    print("feed items =", n)
 
 
 def add(slug, title, excerpt, excerpt_short, date):
@@ -106,6 +146,7 @@ def add(slug, title, excerpt, excerpt_short, date):
     s = s[:hub_end] + entry + s[hub_end:]
     s = re.sub(r'(<loc>https://chung-mu.com/column/</loc>\s*<lastmod>)[\d-]+', r'\g<1>' + date, s)
     write(SITEMAP, s)
+    feed()
     print("registered:", slug)
     check()
 
@@ -115,6 +156,10 @@ if __name__ == "__main__":
         check()
     elif sys.argv[1:] == ["--thumbs"]:
         sync_thumbs()
+    elif sys.argv[1:] == ["--feed"]:
+        feed()
+    elif sys.argv[1:2] == ["--ping"]:
+        ping(sys.argv[2:])
     elif len(sys.argv) >= 5:
         add(*sys.argv[1:5], sys.argv[5] if len(sys.argv) > 5 else datetime.date.today().isoformat())
     else:
